@@ -8,3 +8,8 @@ C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.Gener
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.CoreCompileInputs.cache
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.exe
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.pdb
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\MySql.Data.dll
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Google.Protobuf.dll
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\MySql.Data.xml
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.CopyComplete
