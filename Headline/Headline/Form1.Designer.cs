@@ -30,6 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Login_Panel = new System.Windows.Forms.Panel();
+            this.Registration_Panel = new System.Windows.Forms.Panel();
+            this.Home_Panel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.confirm = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.buttonRegister = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.button_register = new System.Windows.Forms.Button();
@@ -37,21 +50,18 @@
             this.picture = new System.Windows.Forms.PictureBox();
             this.label_Password = new System.Windows.Forms.Label();
             this.Label_UserName = new System.Windows.Forms.Label();
-            this.Registration_Panel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Home_Panel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.buttonGoBack = new System.Windows.Forms.Button();
             this.Login_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.Registration_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Home_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
             // Login_Panel
             // 
-            this.Login_Panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Login_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Login_Panel.Controls.Add(this.Registration_Panel);
             this.Login_Panel.Controls.Add(this.textBox_username);
             this.Login_Panel.Controls.Add(this.textBox_password);
@@ -60,10 +70,135 @@
             this.Login_Panel.Controls.Add(this.picture);
             this.Login_Panel.Controls.Add(this.label_Password);
             this.Login_Panel.Controls.Add(this.Label_UserName);
-            this.Login_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Login_Panel.Location = new System.Drawing.Point(1, 1);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(800, 450);
             this.Login_Panel.TabIndex = 7;
+            // 
+            // Registration_Panel
+            // 
+            this.Registration_Panel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Registration_Panel.Controls.Add(this.buttonGoBack);
+            this.Registration_Panel.Controls.Add(this.Home_Panel);
+            this.Registration_Panel.Controls.Add(this.confirm);
+            this.Registration_Panel.Controls.Add(this.password);
+            this.Registration_Panel.Controls.Add(this.email);
+            this.Registration_Panel.Controls.Add(this.username);
+            this.Registration_Panel.Controls.Add(this.buttonRegister);
+            this.Registration_Panel.Controls.Add(this.label5);
+            this.Registration_Panel.Controls.Add(this.label6);
+            this.Registration_Panel.Controls.Add(this.label7);
+            this.Registration_Panel.Controls.Add(this.label8);
+            this.Registration_Panel.Controls.Add(this.pictureBox1);
+            this.Registration_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Registration_Panel.Name = "Registration_Panel";
+            this.Registration_Panel.Size = new System.Drawing.Size(800, 450);
+            this.Registration_Panel.TabIndex = 14;
+            this.Registration_Panel.Visible = false;
+            // 
+            // Home_Panel
+            // 
+            this.Home_Panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Home_Panel.Controls.Add(this.pictureBox2);
+            this.Home_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Home_Panel.Name = "Home_Panel";
+            this.Home_Panel.Size = new System.Drawing.Size(800, 450);
+            this.Home_Panel.TabIndex = 8;
+            this.Home_Panel.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(285, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // confirm
+            // 
+            this.confirm.Location = new System.Drawing.Point(396, 307);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(100, 20);
+            this.confirm.TabIndex = 31;
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(396, 264);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.TabIndex = 30;
+            // 
+            // email
+            // 
+            this.email.Location = new System.Drawing.Point(396, 215);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(100, 20);
+            this.email.TabIndex = 29;
+            // 
+            // username
+            // 
+            this.username.Location = new System.Drawing.Point(396, 176);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.TabIndex = 28;
+            // 
+            // buttonRegister
+            // 
+            this.buttonRegister.Location = new System.Drawing.Point(434, 380);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegister.TabIndex = 27;
+            this.buttonRegister.Text = "Register";
+            this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(282, 310);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Confirm Password :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(320, 267);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Password :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(339, 218);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "e-mail :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(318, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Username :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(282, 85);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // textBox_username
             // 
@@ -128,44 +263,15 @@
             this.Label_UserName.TabIndex = 7;
             this.Label_UserName.Text = "UserName :";
             // 
-            // Registration_Panel
+            // buttonGoBack
             // 
-            this.Registration_Panel.Controls.Add(this.Home_Panel);
-            this.Registration_Panel.Controls.Add(this.pictureBox1);
-            this.Registration_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Registration_Panel.Name = "Registration_Panel";
-            this.Registration_Panel.Size = new System.Drawing.Size(800, 450);
-            this.Registration_Panel.TabIndex = 14;
-            this.Registration_Panel.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(282, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 62);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Home_Panel
-            // 
-            this.Home_Panel.Controls.Add(this.pictureBox2);
-            this.Home_Panel.Location = new System.Drawing.Point(0, 0);
-            this.Home_Panel.Name = "Home_Panel";
-            this.Home_Panel.Size = new System.Drawing.Size(800, 450);
-            this.Home_Panel.TabIndex = 11;
-            this.Home_Panel.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(282, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 62);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.buttonGoBack.Location = new System.Drawing.Point(321, 379);
+            this.buttonGoBack.Name = "buttonGoBack";
+            this.buttonGoBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonGoBack.TabIndex = 32;
+            this.buttonGoBack.Text = "Go Back";
+            this.buttonGoBack.UseVisualStyleBackColor = true;
+            this.buttonGoBack.Click += new System.EventHandler(this.buttonGoBack_Click);
             // 
             // Form1
             // 
@@ -179,11 +285,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.Registration_Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Registration_Panel.PerformLayout();
             this.Home_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,8 +306,18 @@
         private System.Windows.Forms.Label Label_UserName;
         private System.Windows.Forms.Panel Registration_Panel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox confirm;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel Home_Panel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonGoBack;
     }
 }
 
