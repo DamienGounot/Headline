@@ -169,6 +169,32 @@ namespace Headline
             preferences_panel.Visible = true;
         }
 
+
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Text = "Article";
+            preferences_panel.Visible = true;
+            search_panel.Visible = true;
+            panel_article.Visible = true;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Text = "Article";
+            preferences_panel.Visible = true;
+            search_panel.Visible = true;
+            panel_article.Visible = true;
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Text = "Article";
+            preferences_panel.Visible = true;
+            search_panel.Visible = true;
+            panel_article.Visible = true;
+        }
+
         // Preferences Page
 
         private void butn_home_pref_Click_1(object sender, EventArgs e)
@@ -210,5 +236,31 @@ namespace Headline
             this.Text = "Preferences";
             search_panel.Visible = false;
         }
+
+        // Article Page
+
+        private void btn_article_toHome_Click(object sender, EventArgs e)
+        {
+            this.Text = "Home";
+            panel_article.Visible = false;
+            search_panel.Visible = false;
+            preferences_panel.Visible = false;
+            Home_Panel.Visible = true;
+        }
+
+        private void btn_article_toSearch_Click(object sender, EventArgs e)
+        {
+            this.Text = "Search";
+            panel_article.Visible = false;
+        }
+
+        private void btn_article_toPref_Click(object sender, EventArgs e)
+        {
+            this.Text = "Preferences";
+            panel_article.Visible = false;
+            search_panel.Visible = false;
+        }
+
+
     }
 }
