@@ -57,22 +57,18 @@
             this.button_home_from_search = new System.Windows.Forms.Button();
             this.textBox_country_search = new System.Windows.Forms.TextBox();
             this.textBox_source_search = new System.Windows.Forms.TextBox();
-            this.textBox_date_search = new System.Windows.Forms.TextBox();
             this.textBox_keyword_search = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button_from_search_to_pref = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_save_pref = new System.Windows.Forms.Button();
             this.butn_home_pref = new System.Windows.Forms.Button();
             this.textBox_source_pref = new System.Windows.Forms.TextBox();
-            this.textBox_date_pref = new System.Windows.Forms.TextBox();
             this.textBox_country_pref = new System.Windows.Forms.TextBox();
             this.textBox_keyword_pref = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -88,19 +84,19 @@
             this.btn_Pref = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel_article = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.article_title = new System.Windows.Forms.Label();
-            this.article_description = new System.Windows.Forms.Label();
-            this.article_author = new System.Windows.Forms.Label();
-            this.article_source = new System.Windows.Forms.Label();
-            this.article_date = new System.Windows.Forms.Label();
-            this.article_content = new System.Windows.Forms.RichTextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btn_article_toHome = new System.Windows.Forms.Button();
-            this.btn_article_toSearch = new System.Windows.Forms.Button();
+            this.panel_article = new System.Windows.Forms.Panel();
             this.btn_article_toPref = new System.Windows.Forms.Button();
+            this.btn_article_toSearch = new System.Windows.Forms.Button();
+            this.btn_article_toHome = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.article_content = new System.Windows.Forms.RichTextBox();
+            this.article_date = new System.Windows.Forms.Label();
+            this.article_source = new System.Windows.Forms.Label();
+            this.article_author = new System.Windows.Forms.Label();
+            this.article_description = new System.Windows.Forms.Label();
+            this.article_title = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.Login_Panel.SuspendLayout();
             this.Registration_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,8 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_article.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // Login_Panel
@@ -340,11 +336,9 @@
             this.preferences_panel.Controls.Add(this.btn_save_pref);
             this.preferences_panel.Controls.Add(this.butn_home_pref);
             this.preferences_panel.Controls.Add(this.textBox_source_pref);
-            this.preferences_panel.Controls.Add(this.textBox_date_pref);
             this.preferences_panel.Controls.Add(this.textBox_country_pref);
             this.preferences_panel.Controls.Add(this.textBox_keyword_pref);
             this.preferences_panel.Controls.Add(this.label11);
-            this.preferences_panel.Controls.Add(this.label10);
             this.preferences_panel.Controls.Add(this.label9);
             this.preferences_panel.Controls.Add(this.label4);
             this.preferences_panel.Controls.Add(this.pictureBox3);
@@ -361,11 +355,9 @@
             this.search_panel.Controls.Add(this.button_home_from_search);
             this.search_panel.Controls.Add(this.textBox_country_search);
             this.search_panel.Controls.Add(this.textBox_source_search);
-            this.search_panel.Controls.Add(this.textBox_date_search);
             this.search_panel.Controls.Add(this.textBox_keyword_search);
             this.search_panel.Controls.Add(this.label15);
             this.search_panel.Controls.Add(this.label14);
-            this.search_panel.Controls.Add(this.label13);
             this.search_panel.Controls.Add(this.label12);
             this.search_panel.Controls.Add(this.button_from_search_to_pref);
             this.search_panel.Controls.Add(this.pictureBox4);
@@ -377,7 +369,7 @@
             // 
             // button_make_search
             // 
-            this.button_make_search.Location = new System.Drawing.Point(348, 342);
+            this.button_make_search.Location = new System.Drawing.Point(348, 380);
             this.button_make_search.Name = "button_make_search";
             this.button_make_search.Size = new System.Drawing.Size(75, 23);
             this.button_make_search.TabIndex = 24;
@@ -387,7 +379,7 @@
             // 
             // button_home_from_search
             // 
-            this.button_home_from_search.Location = new System.Drawing.Point(243, 342);
+            this.button_home_from_search.Location = new System.Drawing.Point(231, 380);
             this.button_home_from_search.Name = "button_home_from_search";
             this.button_home_from_search.Size = new System.Drawing.Size(75, 23);
             this.button_home_from_search.TabIndex = 23;
@@ -397,28 +389,21 @@
             // 
             // textBox_country_search
             // 
-            this.textBox_country_search.Location = new System.Drawing.Point(321, 267);
+            this.textBox_country_search.Location = new System.Drawing.Point(323, 172);
             this.textBox_country_search.Name = "textBox_country_search";
             this.textBox_country_search.Size = new System.Drawing.Size(100, 20);
             this.textBox_country_search.TabIndex = 22;
             // 
             // textBox_source_search
             // 
-            this.textBox_source_search.Location = new System.Drawing.Point(321, 225);
+            this.textBox_source_search.Location = new System.Drawing.Point(323, 138);
             this.textBox_source_search.Name = "textBox_source_search";
             this.textBox_source_search.Size = new System.Drawing.Size(100, 20);
             this.textBox_source_search.TabIndex = 21;
             // 
-            // textBox_date_search
-            // 
-            this.textBox_date_search.Location = new System.Drawing.Point(321, 176);
-            this.textBox_date_search.Name = "textBox_date_search";
-            this.textBox_date_search.Size = new System.Drawing.Size(100, 20);
-            this.textBox_date_search.TabIndex = 20;
-            // 
             // textBox_keyword_search
             // 
-            this.textBox_keyword_search.Location = new System.Drawing.Point(323, 126);
+            this.textBox_keyword_search.Location = new System.Drawing.Point(323, 106);
             this.textBox_keyword_search.Name = "textBox_keyword_search";
             this.textBox_keyword_search.Size = new System.Drawing.Size(100, 20);
             this.textBox_keyword_search.TabIndex = 19;
@@ -426,7 +411,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(231, 274);
+            this.label15.Location = new System.Drawing.Point(231, 165);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 13);
             this.label15.TabIndex = 18;
@@ -435,25 +420,16 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(228, 228);
+            this.label14.Location = new System.Drawing.Point(228, 140);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 13);
             this.label14.TabIndex = 17;
             this.label14.Text = "Sources :";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(244, 179);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Date :";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(226, 132);
+            this.label12.Location = new System.Drawing.Point(226, 106);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 13);
             this.label12.TabIndex = 15;
@@ -501,17 +477,10 @@
             // 
             // textBox_source_pref
             // 
-            this.textBox_source_pref.Location = new System.Drawing.Point(342, 254);
+            this.textBox_source_pref.Location = new System.Drawing.Point(342, 229);
             this.textBox_source_pref.Name = "textBox_source_pref";
             this.textBox_source_pref.Size = new System.Drawing.Size(100, 20);
             this.textBox_source_pref.TabIndex = 20;
-            // 
-            // textBox_date_pref
-            // 
-            this.textBox_date_pref.Location = new System.Drawing.Point(342, 211);
-            this.textBox_date_pref.Name = "textBox_date_pref";
-            this.textBox_date_pref.Size = new System.Drawing.Size(100, 20);
-            this.textBox_date_pref.TabIndex = 19;
             // 
             // textBox_country_pref
             // 
@@ -530,20 +499,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(282, 254);
+            this.label11.Location = new System.Drawing.Point(282, 229);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(47, 13);
             this.label11.TabIndex = 16;
             this.label11.Text = "Source :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(282, 215);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Date :";
             // 
             // label9
             // 
@@ -687,6 +647,12 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // panel_article
             // 
             this.panel_article.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -704,54 +670,54 @@
             this.panel_article.Location = new System.Drawing.Point(0, 0);
             this.panel_article.Name = "panel_article";
             this.panel_article.Size = new System.Drawing.Size(797, 450);
-            this.panel_article.TabIndex = 25;
+            this.panel_article.TabIndex = 27;
             this.panel_article.Visible = false;
             // 
-            // pictureBox5
+            // btn_article_toPref
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(285, 17);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(237, 62);
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
+            this.btn_article_toPref.Location = new System.Drawing.Point(528, 46);
+            this.btn_article_toPref.Name = "btn_article_toPref";
+            this.btn_article_toPref.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toPref.TabIndex = 25;
+            this.btn_article_toPref.Text = "Preferences";
+            this.btn_article_toPref.UseVisualStyleBackColor = true;
+            this.btn_article_toPref.Click += new System.EventHandler(this.btn_article_toPref_Click_1);
             // 
-            // article_title
+            // btn_article_toSearch
             // 
-            this.article_title.AutoSize = true;
-            this.article_title.Location = new System.Drawing.Point(396, 126);
-            this.article_title.Name = "article_title";
-            this.article_title.Size = new System.Drawing.Size(27, 13);
-            this.article_title.TabIndex = 16;
-            this.article_title.Text = "Title";
+            this.btn_article_toSearch.Location = new System.Drawing.Point(528, 17);
+            this.btn_article_toSearch.Name = "btn_article_toSearch";
+            this.btn_article_toSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toSearch.TabIndex = 24;
+            this.btn_article_toSearch.Text = "Search";
+            this.btn_article_toSearch.UseVisualStyleBackColor = true;
+            this.btn_article_toSearch.Click += new System.EventHandler(this.btn_article_toSearch_Click_1);
             // 
-            // article_description
+            // btn_article_toHome
             // 
-            this.article_description.AutoSize = true;
-            this.article_description.Location = new System.Drawing.Point(396, 249);
-            this.article_description.Name = "article_description";
-            this.article_description.Size = new System.Drawing.Size(60, 13);
-            this.article_description.TabIndex = 17;
-            this.article_description.Text = "Description";
+            this.btn_article_toHome.Location = new System.Drawing.Point(187, 32);
+            this.btn_article_toHome.Name = "btn_article_toHome";
+            this.btn_article_toHome.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toHome.TabIndex = 23;
+            this.btn_article_toHome.Text = "Home";
+            this.btn_article_toHome.UseVisualStyleBackColor = true;
+            this.btn_article_toHome.Click += new System.EventHandler(this.btn_article_toHome_Click_1);
             // 
-            // article_author
+            // pictureBox6
             // 
-            this.article_author.AutoSize = true;
-            this.article_author.Location = new System.Drawing.Point(311, 281);
-            this.article_author.Name = "article_author";
-            this.article_author.Size = new System.Drawing.Size(38, 13);
-            this.article_author.TabIndex = 18;
-            this.article_author.Text = "Author";
+            this.pictureBox6.Location = new System.Drawing.Point(301, 149);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(234, 82);
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
             // 
-            // article_source
+            // article_content
             // 
-            this.article_source.AutoSize = true;
-            this.article_source.Location = new System.Drawing.Point(399, 281);
-            this.article_source.Name = "article_source";
-            this.article_source.Size = new System.Drawing.Size(41, 13);
-            this.article_source.TabIndex = 19;
-            this.article_source.Text = "Source";
+            this.article_content.Location = new System.Drawing.Point(49, 310);
+            this.article_content.Name = "article_content";
+            this.article_content.Size = new System.Drawing.Size(710, 127);
+            this.article_content.TabIndex = 21;
+            this.article_content.Text = "";
             // 
             // article_date
             // 
@@ -762,57 +728,51 @@
             this.article_date.TabIndex = 20;
             this.article_date.Text = "Date";
             // 
-            // article_content
+            // article_source
             // 
-            this.article_content.Location = new System.Drawing.Point(49, 310);
-            this.article_content.Name = "article_content";
-            this.article_content.Size = new System.Drawing.Size(710, 127);
-            this.article_content.TabIndex = 21;
-            this.article_content.Text = "";
+            this.article_source.AutoSize = true;
+            this.article_source.Location = new System.Drawing.Point(399, 281);
+            this.article_source.Name = "article_source";
+            this.article_source.Size = new System.Drawing.Size(41, 13);
+            this.article_source.TabIndex = 19;
+            this.article_source.Text = "Source";
             // 
-            // pictureBox6
+            // article_author
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(301, 149);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(234, 82);
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
+            this.article_author.AutoSize = true;
+            this.article_author.Location = new System.Drawing.Point(311, 281);
+            this.article_author.Name = "article_author";
+            this.article_author.Size = new System.Drawing.Size(38, 13);
+            this.article_author.TabIndex = 18;
+            this.article_author.Text = "Author";
             // 
-            // imageList1
+            // article_description
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.article_description.AutoSize = true;
+            this.article_description.Location = new System.Drawing.Point(396, 249);
+            this.article_description.Name = "article_description";
+            this.article_description.Size = new System.Drawing.Size(60, 13);
+            this.article_description.TabIndex = 17;
+            this.article_description.Text = "Description";
             // 
-            // btn_article_toHome
+            // article_title
             // 
-            this.btn_article_toHome.Location = new System.Drawing.Point(187, 32);
-            this.btn_article_toHome.Name = "btn_article_toHome";
-            this.btn_article_toHome.Size = new System.Drawing.Size(75, 23);
-            this.btn_article_toHome.TabIndex = 23;
-            this.btn_article_toHome.Text = "Home";
-            this.btn_article_toHome.UseVisualStyleBackColor = true;
-            this.btn_article_toHome.Click += new System.EventHandler(this.btn_article_toHome_Click);
+            this.article_title.AutoSize = true;
+            this.article_title.Location = new System.Drawing.Point(396, 126);
+            this.article_title.Name = "article_title";
+            this.article_title.Size = new System.Drawing.Size(27, 13);
+            this.article_title.TabIndex = 16;
+            this.article_title.Text = "Title";
             // 
-            // btn_article_toSearch
+            // pictureBox5
             // 
-            this.btn_article_toSearch.Location = new System.Drawing.Point(528, 17);
-            this.btn_article_toSearch.Name = "btn_article_toSearch";
-            this.btn_article_toSearch.Size = new System.Drawing.Size(75, 23);
-            this.btn_article_toSearch.TabIndex = 24;
-            this.btn_article_toSearch.Text = "Search";
-            this.btn_article_toSearch.UseVisualStyleBackColor = true;
-            this.btn_article_toSearch.Click += new System.EventHandler(this.btn_article_toSearch_Click);
-            // 
-            // btn_article_toPref
-            // 
-            this.btn_article_toPref.Location = new System.Drawing.Point(528, 46);
-            this.btn_article_toPref.Name = "btn_article_toPref";
-            this.btn_article_toPref.Size = new System.Drawing.Size(75, 23);
-            this.btn_article_toPref.TabIndex = 25;
-            this.btn_article_toPref.Text = "Preferences";
-            this.btn_article_toPref.UseVisualStyleBackColor = true;
-            this.btn_article_toPref.Click += new System.EventHandler(this.btn_article_toPref_Click);
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(285, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
             // 
             // Form1
             // 
@@ -845,8 +805,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_article.ResumeLayout(false);
             this.panel_article.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -879,22 +839,18 @@
         private System.Windows.Forms.Button button_home_from_search;
         private System.Windows.Forms.TextBox textBox_country_search;
         private System.Windows.Forms.TextBox textBox_source_search;
-        private System.Windows.Forms.TextBox textBox_date_search;
         private System.Windows.Forms.TextBox textBox_keyword_search;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button_from_search_to_pref;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btn_save_pref;
         private System.Windows.Forms.Button butn_home_pref;
         private System.Windows.Forms.TextBox textBox_source_pref;
-        private System.Windows.Forms.TextBox textBox_date_pref;
         private System.Windows.Forms.TextBox textBox_country_pref;
         private System.Windows.Forms.TextBox textBox_keyword_pref;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -910,8 +866,11 @@
         private System.Windows.Forms.Button btn_Pref;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel_article;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btn_article_toPref;
+        private System.Windows.Forms.Button btn_article_toSearch;
+        private System.Windows.Forms.Button btn_article_toHome;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.RichTextBox article_content;
         private System.Windows.Forms.Label article_date;
@@ -919,10 +878,7 @@
         private System.Windows.Forms.Label article_author;
         private System.Windows.Forms.Label article_description;
         private System.Windows.Forms.Label article_title;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button btn_article_toPref;
-        private System.Windows.Forms.Button btn_article_toSearch;
-        private System.Windows.Forms.Button btn_article_toHome;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

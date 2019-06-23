@@ -236,7 +236,10 @@ namespace Headline
         #region newsapi
         private void callapi(){
             
-       
+            var source = "";
+            var totalsource = "";
+            
+
           
             #region keyword
 
@@ -246,8 +249,7 @@ namespace Headline
             if (textBox_keyword_search.Text == "")
             {                
                 totalkeyword = "";
-            }
-            else if (textBox_keyword_search.Text!="")
+            }else if (textBox_keyword_search.Text!="")
             {
                 keyword = textBox_keyword_search.Text;
                 totalkeyword = "q=" + keyword + "&";
@@ -269,11 +271,7 @@ namespace Headline
             }
             #endregion
 
-          
-            #region source
-            var source = "";
-            var totalsource = "";
-
+            //source
             if (textBox_source_search.Text=="")
             {
                 totalsource = "";
@@ -281,14 +279,12 @@ namespace Headline
             {
                 source = textBox_source_search.Text;
                 totalsource= "sources=" + source + "&";
-            }
-
-            #endregion
-            
+            }    
+            //end source
             var url = "https://newsapi.org/v2/top-headlines?" + totalkeyword+
                     totalcountry + totalsource +
-                    "apiKey=fba415c197974798bd1833b9f86de604";
-            MessageBox.Show(url);
+                    "&apiKey=fba415c197974798bd1833b9f86de604";
+
             var json = new WebClient().DownloadString(url);
 
 
@@ -322,21 +318,7 @@ namespace Headline
 
         // Article Page
 
-
-        private void btn_article_toSearch_Click_1(object sender, EventArgs e)
-        {
-            this.Text = "Search";
-            panel_article.Visible = false;
-        }
-
-        private void btn_article_toPref_Click_1(object sender, EventArgs e)
-        {
-            this.Text = "Preferences";
-            panel_article.Visible = false;
-            search_panel.Visible = false;
-        }
-
-        private void btn_article_toHome_Click_1(object sender, EventArgs e)
+        private void btn_article_toHome_Click(object sender, EventArgs e)
         {
             this.Text = "Home";
             panel_article.Visible = false;
@@ -344,5 +326,20 @@ namespace Headline
             preferences_panel.Visible = false;
             Home_Panel.Visible = true;
         }
+
+        private void btn_article_toSearch_Click(object sender, EventArgs e)
+        {
+            this.Text = "Search";
+            panel_article.Visible = false;
+        }
+
+        private void btn_article_toPref_Click(object sender, EventArgs e)
+        {
+            this.Text = "Preferences";
+            panel_article.Visible = false;
+            search_panel.Visible = false;
+        }
+
+       
     }
 }
