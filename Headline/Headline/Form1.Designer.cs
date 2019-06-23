@@ -28,9 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Login_Panel = new System.Windows.Forms.Panel();
             this.Registration_Panel = new System.Windows.Forms.Panel();
+            this.button_home_from_reg = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.buttonRegister = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox_username = new System.Windows.Forms.TextBox();
+            this.textBox_password = new System.Windows.Forms.TextBox();
+            this.button_register = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.label_Password = new System.Windows.Forms.Label();
+            this.Label_UserName = new System.Windows.Forms.Label();
             this.Home_Panel = new System.Windows.Forms.Panel();
             this.preferences_panel = new System.Windows.Forms.Panel();
             this.search_panel = new System.Windows.Forms.Panel();
@@ -69,26 +88,23 @@
             this.btn_Pref = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button_home_from_reg = new System.Windows.Forms.Button();
-            this.confirm = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
-            this.email = new System.Windows.Forms.TextBox();
-            this.username = new System.Windows.Forms.TextBox();
-            this.buttonRegister = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox_username = new System.Windows.Forms.TextBox();
-            this.textBox_password = new System.Windows.Forms.TextBox();
-            this.button_register = new System.Windows.Forms.Button();
-            this.button_login = new System.Windows.Forms.Button();
-            this.picture = new System.Windows.Forms.PictureBox();
-            this.label_Password = new System.Windows.Forms.Label();
-            this.Label_UserName = new System.Windows.Forms.Label();
+            this.panel_article = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.article_title = new System.Windows.Forms.Label();
+            this.article_description = new System.Windows.Forms.Label();
+            this.article_author = new System.Windows.Forms.Label();
+            this.article_source = new System.Windows.Forms.Label();
+            this.article_date = new System.Windows.Forms.Label();
+            this.article_content = new System.Windows.Forms.RichTextBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btn_article_toHome = new System.Windows.Forms.Button();
+            this.btn_article_toSearch = new System.Windows.Forms.Button();
+            this.btn_article_toPref = new System.Windows.Forms.Button();
             this.Login_Panel.SuspendLayout();
             this.Registration_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.Home_Panel.SuspendLayout();
             this.preferences_panel.SuspendLayout();
             this.search_panel.SuspendLayout();
@@ -98,8 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.panel_article.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // Login_Panel
@@ -137,6 +154,163 @@
             this.Registration_Panel.Size = new System.Drawing.Size(800, 450);
             this.Registration_Panel.TabIndex = 14;
             this.Registration_Panel.Visible = false;
+            // 
+            // button_home_from_reg
+            // 
+            this.button_home_from_reg.Location = new System.Drawing.Point(332, 380);
+            this.button_home_from_reg.Name = "button_home_from_reg";
+            this.button_home_from_reg.Size = new System.Drawing.Size(75, 23);
+            this.button_home_from_reg.TabIndex = 32;
+            this.button_home_from_reg.Text = "Back";
+            this.button_home_from_reg.UseVisualStyleBackColor = true;
+            this.button_home_from_reg.Click += new System.EventHandler(this.button_home_from_reg_Click);
+            // 
+            // confirm
+            // 
+            this.confirm.Location = new System.Drawing.Point(396, 307);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(100, 20);
+            this.confirm.TabIndex = 31;
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(396, 264);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(100, 20);
+            this.password.TabIndex = 30;
+            // 
+            // email
+            // 
+            this.email.Location = new System.Drawing.Point(396, 215);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(100, 20);
+            this.email.TabIndex = 29;
+            // 
+            // username
+            // 
+            this.username.Location = new System.Drawing.Point(396, 176);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(100, 20);
+            this.username.TabIndex = 28;
+            // 
+            // buttonRegister
+            // 
+            this.buttonRegister.Location = new System.Drawing.Point(434, 380);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegister.TabIndex = 27;
+            this.buttonRegister.Text = "Register";
+            this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(282, 310);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Confirm Password :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(320, 267);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Password :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(339, 218);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "e-mail :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(318, 179);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Username :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(282, 85);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox_username
+            // 
+            this.textBox_username.Location = new System.Drawing.Point(381, 222);
+            this.textBox_username.Name = "textBox_username";
+            this.textBox_username.Size = new System.Drawing.Size(100, 20);
+            this.textBox_username.TabIndex = 13;
+            // 
+            // textBox_password
+            // 
+            this.textBox_password.Location = new System.Drawing.Point(381, 261);
+            this.textBox_password.Name = "textBox_password";
+            this.textBox_password.PasswordChar = '*';
+            this.textBox_password.Size = new System.Drawing.Size(100, 20);
+            this.textBox_password.TabIndex = 12;
+            // 
+            // button_register
+            // 
+            this.button_register.Location = new System.Drawing.Point(407, 325);
+            this.button_register.Name = "button_register";
+            this.button_register.Size = new System.Drawing.Size(112, 40);
+            this.button_register.TabIndex = 11;
+            this.button_register.Text = "Not a member ? Register now !";
+            this.button_register.UseVisualStyleBackColor = true;
+            this.button_register.Click += new System.EventHandler(this.button_register_Click);
+            // 
+            // button_login
+            // 
+            this.button_login.Location = new System.Drawing.Point(282, 334);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(75, 23);
+            this.button_login.TabIndex = 10;
+            this.button_login.Text = "Log in";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click_1);
+            // 
+            // picture
+            // 
+            this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
+            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
+            this.picture.Location = new System.Drawing.Point(282, 85);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(237, 62);
+            this.picture.TabIndex = 9;
+            this.picture.TabStop = false;
+            // 
+            // label_Password
+            // 
+            this.label_Password.AutoSize = true;
+            this.label_Password.Location = new System.Drawing.Point(294, 264);
+            this.label_Password.Name = "label_Password";
+            this.label_Password.Size = new System.Drawing.Size(59, 13);
+            this.label_Password.TabIndex = 8;
+            this.label_Password.Text = "Password :";
+            // 
+            // Label_UserName
+            // 
+            this.Label_UserName.AutoSize = true;
+            this.Label_UserName.Location = new System.Drawing.Point(294, 222);
+            this.Label_UserName.Name = "Label_UserName";
+            this.Label_UserName.Size = new System.Drawing.Size(63, 13);
+            this.Label_UserName.TabIndex = 7;
+            this.Label_UserName.Text = "UserName :";
             // 
             // Home_Panel
             // 
@@ -182,6 +356,7 @@
             // 
             // search_panel
             // 
+            this.search_panel.Controls.Add(this.panel_article);
             this.search_panel.Controls.Add(this.button_make_search);
             this.search_panel.Controls.Add(this.button_home_from_search);
             this.search_panel.Controls.Add(this.textBox_country_search);
@@ -407,6 +582,7 @@
             this.linkLabel3.TabIndex = 22;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "linkLabel3";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -417,6 +593,7 @@
             this.linkLabel2.TabIndex = 21;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "linkLabel2";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -427,6 +604,7 @@
             this.linkLabel1.TabIndex = 20;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBoxArticle3
             // 
@@ -509,162 +687,132 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // button_home_from_reg
+            // panel_article
             // 
-            this.button_home_from_reg.Location = new System.Drawing.Point(332, 380);
-            this.button_home_from_reg.Name = "button_home_from_reg";
-            this.button_home_from_reg.Size = new System.Drawing.Size(75, 23);
-            this.button_home_from_reg.TabIndex = 32;
-            this.button_home_from_reg.Text = "Back";
-            this.button_home_from_reg.UseVisualStyleBackColor = true;
-            this.button_home_from_reg.Click += new System.EventHandler(this.button_home_from_reg_Click);
+            this.panel_article.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel_article.Controls.Add(this.btn_article_toPref);
+            this.panel_article.Controls.Add(this.btn_article_toSearch);
+            this.panel_article.Controls.Add(this.btn_article_toHome);
+            this.panel_article.Controls.Add(this.pictureBox6);
+            this.panel_article.Controls.Add(this.article_content);
+            this.panel_article.Controls.Add(this.article_date);
+            this.panel_article.Controls.Add(this.article_source);
+            this.panel_article.Controls.Add(this.article_author);
+            this.panel_article.Controls.Add(this.article_description);
+            this.panel_article.Controls.Add(this.article_title);
+            this.panel_article.Controls.Add(this.pictureBox5);
+            this.panel_article.Location = new System.Drawing.Point(0, 0);
+            this.panel_article.Name = "panel_article";
+            this.panel_article.Size = new System.Drawing.Size(797, 450);
+            this.panel_article.TabIndex = 25;
+            this.panel_article.Visible = false;
             // 
-            // confirm
+            // pictureBox5
             // 
-            this.confirm.Location = new System.Drawing.Point(396, 307);
-            this.confirm.Name = "confirm";
-            this.confirm.Size = new System.Drawing.Size(100, 20);
-            this.confirm.TabIndex = 31;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(285, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
             // 
-            // password
+            // article_title
             // 
-            this.password.Location = new System.Drawing.Point(396, 264);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 20);
-            this.password.TabIndex = 30;
+            this.article_title.AutoSize = true;
+            this.article_title.Location = new System.Drawing.Point(396, 126);
+            this.article_title.Name = "article_title";
+            this.article_title.Size = new System.Drawing.Size(27, 13);
+            this.article_title.TabIndex = 16;
+            this.article_title.Text = "Title";
             // 
-            // email
+            // article_description
             // 
-            this.email.Location = new System.Drawing.Point(396, 215);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(100, 20);
-            this.email.TabIndex = 29;
+            this.article_description.AutoSize = true;
+            this.article_description.Location = new System.Drawing.Point(396, 249);
+            this.article_description.Name = "article_description";
+            this.article_description.Size = new System.Drawing.Size(60, 13);
+            this.article_description.TabIndex = 17;
+            this.article_description.Text = "Description";
             // 
-            // username
+            // article_author
             // 
-            this.username.Location = new System.Drawing.Point(396, 176);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(100, 20);
-            this.username.TabIndex = 28;
+            this.article_author.AutoSize = true;
+            this.article_author.Location = new System.Drawing.Point(311, 281);
+            this.article_author.Name = "article_author";
+            this.article_author.Size = new System.Drawing.Size(38, 13);
+            this.article_author.TabIndex = 18;
+            this.article_author.Text = "Author";
             // 
-            // buttonRegister
+            // article_source
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(434, 380);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(75, 23);
-            this.buttonRegister.TabIndex = 27;
-            this.buttonRegister.Text = "Register";
-            this.buttonRegister.UseVisualStyleBackColor = true;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            this.article_source.AutoSize = true;
+            this.article_source.Location = new System.Drawing.Point(399, 281);
+            this.article_source.Name = "article_source";
+            this.article_source.Size = new System.Drawing.Size(41, 13);
+            this.article_source.TabIndex = 19;
+            this.article_source.Text = "Source";
             // 
-            // label5
+            // article_date
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(282, 310);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 13);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Confirm Password :";
+            this.article_date.AutoSize = true;
+            this.article_date.Location = new System.Drawing.Point(502, 281);
+            this.article_date.Name = "article_date";
+            this.article_date.Size = new System.Drawing.Size(30, 13);
+            this.article_date.TabIndex = 20;
+            this.article_date.Text = "Date";
             // 
-            // label6
+            // article_content
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(320, 267);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Password :";
+            this.article_content.Location = new System.Drawing.Point(49, 310);
+            this.article_content.Name = "article_content";
+            this.article_content.Size = new System.Drawing.Size(710, 127);
+            this.article_content.TabIndex = 21;
+            this.article_content.Text = "";
             // 
-            // label7
+            // pictureBox6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(339, 218);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "e-mail :";
+            this.pictureBox6.Location = new System.Drawing.Point(301, 149);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(234, 82);
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
             // 
-            // label8
+            // imageList1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(318, 179);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Username :";
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // pictureBox1
+            // btn_article_toHome
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(282, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 62);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.btn_article_toHome.Location = new System.Drawing.Point(187, 32);
+            this.btn_article_toHome.Name = "btn_article_toHome";
+            this.btn_article_toHome.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toHome.TabIndex = 23;
+            this.btn_article_toHome.Text = "Home";
+            this.btn_article_toHome.UseVisualStyleBackColor = true;
+            this.btn_article_toHome.Click += new System.EventHandler(this.btn_article_toHome_Click);
             // 
-            // textBox_username
+            // btn_article_toSearch
             // 
-            this.textBox_username.Location = new System.Drawing.Point(381, 222);
-            this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(100, 20);
-            this.textBox_username.TabIndex = 13;
+            this.btn_article_toSearch.Location = new System.Drawing.Point(528, 17);
+            this.btn_article_toSearch.Name = "btn_article_toSearch";
+            this.btn_article_toSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toSearch.TabIndex = 24;
+            this.btn_article_toSearch.Text = "Search";
+            this.btn_article_toSearch.UseVisualStyleBackColor = true;
+            this.btn_article_toSearch.Click += new System.EventHandler(this.btn_article_toSearch_Click);
             // 
-            // textBox_password
+            // btn_article_toPref
             // 
-            this.textBox_password.Location = new System.Drawing.Point(381, 261);
-            this.textBox_password.Name = "textBox_password";
-            this.textBox_password.PasswordChar = '*';
-            this.textBox_password.Size = new System.Drawing.Size(100, 20);
-            this.textBox_password.TabIndex = 12;
-            // 
-            // button_register
-            // 
-            this.button_register.Location = new System.Drawing.Point(407, 325);
-            this.button_register.Name = "button_register";
-            this.button_register.Size = new System.Drawing.Size(112, 40);
-            this.button_register.TabIndex = 11;
-            this.button_register.Text = "Not a member ? Register now !";
-            this.button_register.UseVisualStyleBackColor = true;
-            this.button_register.Click += new System.EventHandler(this.button_register_Click);
-            // 
-            // button_login
-            // 
-            this.button_login.Location = new System.Drawing.Point(282, 334);
-            this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(75, 23);
-            this.button_login.TabIndex = 10;
-            this.button_login.Text = "Log in";
-            this.button_login.UseVisualStyleBackColor = true;
-            this.button_login.Click += new System.EventHandler(this.button_login_Click_1);
-            // 
-            // picture
-            // 
-            this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
-            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(282, 85);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(237, 62);
-            this.picture.TabIndex = 9;
-            this.picture.TabStop = false;
-            // 
-            // label_Password
-            // 
-            this.label_Password.AutoSize = true;
-            this.label_Password.Location = new System.Drawing.Point(294, 264);
-            this.label_Password.Name = "label_Password";
-            this.label_Password.Size = new System.Drawing.Size(59, 13);
-            this.label_Password.TabIndex = 8;
-            this.label_Password.Text = "Password :";
-            // 
-            // Label_UserName
-            // 
-            this.Label_UserName.AutoSize = true;
-            this.Label_UserName.Location = new System.Drawing.Point(294, 222);
-            this.Label_UserName.Name = "Label_UserName";
-            this.Label_UserName.Size = new System.Drawing.Size(63, 13);
-            this.Label_UserName.TabIndex = 7;
-            this.Label_UserName.Text = "UserName :";
+            this.btn_article_toPref.Location = new System.Drawing.Point(528, 46);
+            this.btn_article_toPref.Name = "btn_article_toPref";
+            this.btn_article_toPref.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toPref.TabIndex = 25;
+            this.btn_article_toPref.Text = "Preferences";
+            this.btn_article_toPref.UseVisualStyleBackColor = true;
+            this.btn_article_toPref.Click += new System.EventHandler(this.btn_article_toPref_Click);
             // 
             // Form1
             // 
@@ -681,6 +829,8 @@
             this.Login_Panel.PerformLayout();
             this.Registration_Panel.ResumeLayout(false);
             this.Registration_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.Home_Panel.ResumeLayout(false);
             this.Home_Panel.PerformLayout();
             this.preferences_panel.ResumeLayout(false);
@@ -693,8 +843,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.panel_article.ResumeLayout(false);
+            this.panel_article.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -758,6 +910,19 @@
         private System.Windows.Forms.Button btn_Pref;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel_article;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.RichTextBox article_content;
+        private System.Windows.Forms.Label article_date;
+        private System.Windows.Forms.Label article_source;
+        private System.Windows.Forms.Label article_author;
+        private System.Windows.Forms.Label article_description;
+        private System.Windows.Forms.Label article_title;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btn_article_toPref;
+        private System.Windows.Forms.Button btn_article_toSearch;
+        private System.Windows.Forms.Button btn_article_toHome;
     }
 }
 
