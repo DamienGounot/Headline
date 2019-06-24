@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.Net;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 
 
@@ -20,6 +21,8 @@ namespace Headline
     {
 
         #region init
+
+        string urlweb;
         string source1 = "";
         string author1 = "";
         string date1 = "";
@@ -27,6 +30,7 @@ namespace Headline
         string title1 = "";
         string content1 = "";
         string image1;
+        string url1;
 
         string source2 = "";
         string author2 = "";
@@ -35,6 +39,7 @@ namespace Headline
         string title2 = "";
         string content2 = "";
         string image2;
+        string url2;
 
         string source3 = "";
         string author3 = "";
@@ -43,7 +48,7 @@ namespace Headline
         string title3 = "";
         string content3 = "";
         string image3;
-
+        string url3;
         string favoriteKeyword;
         string favoriteCountry;
         string initURL;
@@ -146,15 +151,28 @@ namespace Headline
                  initURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=fba415c197974798bd1833b9f86de604";
             }
 
-
+            
 
 
 
             var json = new WebClient().DownloadString(initURL);
 
 
+            
+
 
             var jPerson = JsonConvert.DeserializeObject<dynamic>(json);
+
+            if (jPerson.totalResults ==0)
+            {
+                MessageBox.Show("There is no top headlines about your preferences");
+                initURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=fba415c197974798bd1833b9f86de604";
+                json = new WebClient().DownloadString(initURL);
+                jPerson = JsonConvert.DeserializeObject<dynamic>(json);
+
+            }
+
+
 
             var i = 1;
             foreach (var num in jPerson.articles)
@@ -173,6 +191,7 @@ namespace Headline
 
                     pictureBoxArticle1.ImageLocation = num.urlToImage;
                     titlehome1.Text = num.title;
+                    url1 = num.url;
 
 
 
@@ -192,6 +211,7 @@ namespace Headline
 
                     pictureBoxArticle2.ImageLocation = num.urlToImage;
                     titlehome2.Text = num.title;
+                    url2 = num.url2;
                 }
                 else if (i == 3)
                 {
@@ -206,6 +226,7 @@ namespace Headline
 
                     pictureBoxArticle3.ImageLocation = num.urlToImage;
                     titlehome3.Text = num.title;
+                    url3 = num.url;
                 }
 
                 i++;
@@ -323,11 +344,12 @@ namespace Headline
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            showarticle(source1, author1, content1, date1, description1, title1,image1);
+            showarticle(source1, author1, content1, date1, description1, title1,image1,url1);
             this.Text = "Article";
             preferences_panel.Visible = true;
             search_panel.Visible = true;
             panel_article.Visible = true;
+            urlweb = url1;
             
             
 
@@ -335,21 +357,22 @@ namespace Headline
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            showarticle(source2, author2, content2, date2, description2, title2,image2);
+            showarticle(source2, author2, content2, date2, description2, title2,image2,url2);
             this.Text = "Article";
             preferences_panel.Visible = true;
             search_panel.Visible = true;
             panel_article.Visible = true;
-            
+            urlweb = url2;
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            showarticle(source3, author3, content3, date3, description3, title3,image3);
+            showarticle(source3, author3, content3, date3, description3, title3,image3,url3);
             this.Text = "Article";
             preferences_panel.Visible = true;
             search_panel.Visible = true;
             panel_article.Visible = true;
+            urlweb = url3;
         }
 
         #endregion
@@ -390,7 +413,7 @@ namespace Headline
         }
 
 
-        private void showarticle(string source, string author, string content, string date, string description, string title,string image)
+        private void showarticle(string source, string author, string content, string date, string description, string title,string image,string url)
         {
             callapi();
             article_source.Text = source;
@@ -400,6 +423,7 @@ namespace Headline
             article_description.Text = description;
             article_title.Text = title;
             pictureBox6.ImageLocation = image;
+            linkLabel4.Text = url;
 
         }
 
@@ -475,12 +499,25 @@ namespace Headline
                 var url = "https://newsapi.org/v2/top-headlines?" + totalkeyword +
                     totalcountry + totalsource +
                     "apiKey=fba415c197974798bd1833b9f86de604";
-                MessageBox.Show(url);
+                //MessageBox.Show(url);
                 var json = new WebClient().DownloadString(url);
 
 
 
                 var jPerson = JsonConvert.DeserializeObject<dynamic>(json);
+
+
+
+
+                if (jPerson.totalResults<1)
+                {
+                    MessageBox.Show("There is no headlines news about this"); ;
+                }
+
+
+
+
+
 
                 var i = 1;
                 foreach (var num in jPerson.articles)
@@ -499,6 +536,8 @@ namespace Headline
 
                         pictureBoxArticle1.ImageLocation = num.urlToImage;
                         titlehome1.Text = num.title;
+                        url1 = num.url;
+                        
                   
 
 
@@ -517,6 +556,7 @@ namespace Headline
 
                         pictureBoxArticle2.ImageLocation = num.urlToImage;
                         titlehome2.Text = num.title;
+                        url2 = num.url;
                     }
                     else if (i == 3)
                     {
@@ -531,10 +571,57 @@ namespace Headline
 
                         pictureBoxArticle3.ImageLocation = num.urlToImage;
                         titlehome3.Text = num.title;
+                        url3 = num.url;
                     }
 
                     i++;
                     
+
+                }
+
+
+
+                if (jPerson.totalResults == 1)
+                {
+                    source2 = "";
+                    author2 = "";
+                    content2 = "";
+                    date2 = "";
+                    description2 = "";
+                    title2 = "";
+                    image2 = "";
+
+                    pictureBoxArticle2.ImageLocation = "";
+                    titlehome2.Text = "";
+                    url2 = "";
+
+                    source3 = "";
+                    author3 = "";
+                    content3 = "";
+                    date3 = "";
+                    description3 = "";
+                    title3 = "";
+                    image3 = "";
+
+                    pictureBoxArticle3.ImageLocation = "";
+                    titlehome3.Text = "";
+                    url3 = "";
+
+
+                }else if (jPerson.totalResults==2)
+                {
+                    source3 = "";
+                    author3 = "";
+                    content3 = "";
+                    date3 = "";
+                    description3 = "";
+                    title3 = "";
+                    image3 = "";
+
+                    pictureBoxArticle3.ImageLocation = "";
+                    titlehome3.Text = "";
+                    url3 = "";
+
 
                 }
 
@@ -589,5 +676,14 @@ namespace Headline
 
         #endregion
 
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(urlweb);
+        }
+
+        private void preferences_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

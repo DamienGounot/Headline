@@ -53,18 +53,6 @@
             this.Home_Panel = new System.Windows.Forms.Panel();
             this.preferences_panel = new System.Windows.Forms.Panel();
             this.search_panel = new System.Windows.Forms.Panel();
-            this.panel_article = new System.Windows.Forms.Panel();
-            this.btn_article_toPref = new System.Windows.Forms.Button();
-            this.btn_article_toSearch = new System.Windows.Forms.Button();
-            this.btn_article_toHome = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.article_content = new System.Windows.Forms.RichTextBox();
-            this.article_date = new System.Windows.Forms.Label();
-            this.article_source = new System.Windows.Forms.Label();
-            this.article_author = new System.Windows.Forms.Label();
-            this.article_description = new System.Windows.Forms.Label();
-            this.article_title = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button_make_search = new System.Windows.Forms.Button();
             this.button_home_from_search = new System.Windows.Forms.Button();
             this.textBox_country_search = new System.Windows.Forms.TextBox();
@@ -94,7 +82,20 @@
             this.btn_Pref = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel_article = new System.Windows.Forms.Panel();
+            this.btn_article_toPref = new System.Windows.Forms.Button();
+            this.btn_article_toSearch = new System.Windows.Forms.Button();
+            this.btn_article_toHome = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.article_content = new System.Windows.Forms.RichTextBox();
+            this.article_date = new System.Windows.Forms.Label();
+            this.article_source = new System.Windows.Forms.Label();
+            this.article_author = new System.Windows.Forms.Label();
+            this.article_description = new System.Windows.Forms.Label();
+            this.article_title = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.Login_Panel.SuspendLayout();
             this.Registration_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,19 +103,22 @@
             this.Home_Panel.SuspendLayout();
             this.preferences_panel.SuspendLayout();
             this.search_panel.SuspendLayout();
-            this.panel_article.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel_article.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // Login_Panel
             // 
+            this.Login_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Login_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Login_Panel.Controls.Add(this.Registration_Panel);
             this.Login_Panel.Controls.Add(this.textBox_username);
@@ -124,14 +128,18 @@
             this.Login_Panel.Controls.Add(this.picture);
             this.Login_Panel.Controls.Add(this.label_Password);
             this.Login_Panel.Controls.Add(this.Label_UserName);
-            this.Login_Panel.Location = new System.Drawing.Point(1, 1);
+            this.Login_Panel.Location = new System.Drawing.Point(2, 0);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(800, 450);
             this.Login_Panel.TabIndex = 7;
             // 
             // Registration_Panel
             // 
+            this.Registration_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Registration_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Registration_Panel.Controls.Add(this.Home_Panel);
             this.Registration_Panel.Controls.Add(this.button_home_from_reg);
             this.Registration_Panel.Controls.Add(this.confirm);
             this.Registration_Panel.Controls.Add(this.password);
@@ -308,6 +316,9 @@
             // 
             // Home_Panel
             // 
+            this.Home_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Home_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Home_Panel.Controls.Add(this.preferences_panel);
             this.Home_Panel.Controls.Add(this.titlehome3);
@@ -322,7 +333,7 @@
             this.Home_Panel.Controls.Add(this.btn_Pref);
             this.Home_Panel.Controls.Add(this.btn_Search);
             this.Home_Panel.Controls.Add(this.pictureBox2);
-            this.Home_Panel.Location = new System.Drawing.Point(1, 1);
+            this.Home_Panel.Location = new System.Drawing.Point(0, 0);
             this.Home_Panel.Name = "Home_Panel";
             this.Home_Panel.Size = new System.Drawing.Size(800, 450);
             this.Home_Panel.TabIndex = 33;
@@ -330,6 +341,9 @@
             // 
             // preferences_panel
             // 
+            this.preferences_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.preferences_panel.Controls.Add(this.search_panel);
             this.preferences_panel.Controls.Add(this.btn_save_pref);
             this.preferences_panel.Controls.Add(this.butn_home_pref);
@@ -343,9 +357,14 @@
             this.preferences_panel.Size = new System.Drawing.Size(797, 450);
             this.preferences_panel.TabIndex = 26;
             this.preferences_panel.Visible = false;
+            this.preferences_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.preferences_panel_Paint);
             // 
             // search_panel
             // 
+            this.search_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_panel.Controls.Add(this.panel_article);
             this.search_panel.Controls.Add(this.button_make_search);
             this.search_panel.Controls.Add(this.button_home_from_search);
             this.search_panel.Controls.Add(this.textBox_country_search);
@@ -361,127 +380,6 @@
             this.search_panel.Size = new System.Drawing.Size(797, 450);
             this.search_panel.TabIndex = 24;
             this.search_panel.Visible = false;
-            // 
-            // panel_article
-            // 
-            this.panel_article.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel_article.Controls.Add(this.btn_article_toPref);
-            this.panel_article.Controls.Add(this.btn_article_toSearch);
-            this.panel_article.Controls.Add(this.btn_article_toHome);
-            this.panel_article.Controls.Add(this.pictureBox6);
-            this.panel_article.Controls.Add(this.article_content);
-            this.panel_article.Controls.Add(this.article_date);
-            this.panel_article.Controls.Add(this.article_source);
-            this.panel_article.Controls.Add(this.article_author);
-            this.panel_article.Controls.Add(this.article_description);
-            this.panel_article.Controls.Add(this.article_title);
-            this.panel_article.Controls.Add(this.pictureBox5);
-            this.panel_article.Location = new System.Drawing.Point(1, 1);
-            this.panel_article.Name = "panel_article";
-            this.panel_article.Size = new System.Drawing.Size(797, 450);
-            this.panel_article.TabIndex = 28;
-            this.panel_article.Visible = false;
-            // 
-            // btn_article_toPref
-            // 
-            this.btn_article_toPref.Location = new System.Drawing.Point(528, 46);
-            this.btn_article_toPref.Name = "btn_article_toPref";
-            this.btn_article_toPref.Size = new System.Drawing.Size(75, 23);
-            this.btn_article_toPref.TabIndex = 25;
-            this.btn_article_toPref.Text = "Preferences";
-            this.btn_article_toPref.UseVisualStyleBackColor = true;
-            this.btn_article_toPref.Click += new System.EventHandler(this.btn_article_toPref_Click);
-            // 
-            // btn_article_toSearch
-            // 
-            this.btn_article_toSearch.Location = new System.Drawing.Point(528, 17);
-            this.btn_article_toSearch.Name = "btn_article_toSearch";
-            this.btn_article_toSearch.Size = new System.Drawing.Size(75, 23);
-            this.btn_article_toSearch.TabIndex = 24;
-            this.btn_article_toSearch.Text = "Search";
-            this.btn_article_toSearch.UseVisualStyleBackColor = true;
-            this.btn_article_toSearch.Click += new System.EventHandler(this.btn_article_toSearch_Click);
-            // 
-            // btn_article_toHome
-            // 
-            this.btn_article_toHome.Location = new System.Drawing.Point(187, 32);
-            this.btn_article_toHome.Name = "btn_article_toHome";
-            this.btn_article_toHome.Size = new System.Drawing.Size(75, 23);
-            this.btn_article_toHome.TabIndex = 23;
-            this.btn_article_toHome.Text = "Home";
-            this.btn_article_toHome.UseVisualStyleBackColor = true;
-            this.btn_article_toHome.Click += new System.EventHandler(this.btn_article_toHome_Click_1);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(301, 149);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(234, 82);
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
-            // 
-            // article_content
-            // 
-            this.article_content.Location = new System.Drawing.Point(49, 310);
-            this.article_content.Name = "article_content";
-            this.article_content.Size = new System.Drawing.Size(710, 127);
-            this.article_content.TabIndex = 21;
-            this.article_content.Text = "";
-            // 
-            // article_date
-            // 
-            this.article_date.AutoSize = true;
-            this.article_date.Location = new System.Drawing.Point(502, 281);
-            this.article_date.Name = "article_date";
-            this.article_date.Size = new System.Drawing.Size(30, 13);
-            this.article_date.TabIndex = 20;
-            this.article_date.Text = "Date";
-            // 
-            // article_source
-            // 
-            this.article_source.AutoSize = true;
-            this.article_source.Location = new System.Drawing.Point(399, 281);
-            this.article_source.Name = "article_source";
-            this.article_source.Size = new System.Drawing.Size(41, 13);
-            this.article_source.TabIndex = 19;
-            this.article_source.Text = "Source";
-            // 
-            // article_author
-            // 
-            this.article_author.AutoSize = true;
-            this.article_author.Location = new System.Drawing.Point(311, 281);
-            this.article_author.Name = "article_author";
-            this.article_author.Size = new System.Drawing.Size(38, 13);
-            this.article_author.TabIndex = 18;
-            this.article_author.Text = "Author";
-            // 
-            // article_description
-            // 
-            this.article_description.AutoSize = true;
-            this.article_description.Location = new System.Drawing.Point(396, 249);
-            this.article_description.Name = "article_description";
-            this.article_description.Size = new System.Drawing.Size(60, 13);
-            this.article_description.TabIndex = 17;
-            this.article_description.Text = "Description";
-            // 
-            // article_title
-            // 
-            this.article_title.AutoSize = true;
-            this.article_title.Location = new System.Drawing.Point(396, 126);
-            this.article_title.Name = "article_title";
-            this.article_title.Size = new System.Drawing.Size(27, 13);
-            this.article_title.TabIndex = 16;
-            this.article_title.Text = "Title";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(285, 17);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(237, 62);
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
             // 
             // button_make_search
             // 
@@ -695,6 +593,7 @@
             this.pictureBoxArticle3.Location = new System.Drawing.Point(541, 181);
             this.pictureBoxArticle3.Name = "pictureBoxArticle3";
             this.pictureBoxArticle3.Size = new System.Drawing.Size(246, 146);
+            this.pictureBoxArticle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxArticle3.TabIndex = 19;
             this.pictureBoxArticle3.TabStop = false;
             // 
@@ -703,6 +602,7 @@
             this.pictureBoxArticle2.Location = new System.Drawing.Point(282, 181);
             this.pictureBoxArticle2.Name = "pictureBoxArticle2";
             this.pictureBoxArticle2.Size = new System.Drawing.Size(240, 146);
+            this.pictureBoxArticle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxArticle2.TabIndex = 18;
             this.pictureBoxArticle2.TabStop = false;
             // 
@@ -711,6 +611,7 @@
             this.pictureBoxArticle1.Location = new System.Drawing.Point(38, 181);
             this.pictureBoxArticle1.Name = "pictureBoxArticle1";
             this.pictureBoxArticle1.Size = new System.Drawing.Size(222, 146);
+            this.pictureBoxArticle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxArticle1.TabIndex = 17;
             this.pictureBoxArticle1.TabStop = false;
             // 
@@ -744,11 +645,167 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // panel_article
+            // 
+            this.panel_article.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_article.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel_article.Controls.Add(this.linkLabel4);
+            this.panel_article.Controls.Add(this.btn_article_toPref);
+            this.panel_article.Controls.Add(this.btn_article_toSearch);
+            this.panel_article.Controls.Add(this.btn_article_toHome);
+            this.panel_article.Controls.Add(this.pictureBox6);
+            this.panel_article.Controls.Add(this.article_content);
+            this.panel_article.Controls.Add(this.article_date);
+            this.panel_article.Controls.Add(this.article_source);
+            this.panel_article.Controls.Add(this.article_author);
+            this.panel_article.Controls.Add(this.article_description);
+            this.panel_article.Controls.Add(this.article_title);
+            this.panel_article.Controls.Add(this.pictureBox5);
+            this.panel_article.Location = new System.Drawing.Point(0, 0);
+            this.panel_article.Name = "panel_article";
+            this.panel_article.Size = new System.Drawing.Size(797, 450);
+            this.panel_article.TabIndex = 28;
+            this.panel_article.Visible = false;
+            // 
+            // btn_article_toPref
+            // 
+            this.btn_article_toPref.Location = new System.Drawing.Point(528, 46);
+            this.btn_article_toPref.Name = "btn_article_toPref";
+            this.btn_article_toPref.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toPref.TabIndex = 25;
+            this.btn_article_toPref.Text = "Preferences";
+            this.btn_article_toPref.UseVisualStyleBackColor = true;
+            this.btn_article_toPref.Click += new System.EventHandler(this.btn_article_toPref_Click);
+            // 
+            // btn_article_toSearch
+            // 
+            this.btn_article_toSearch.Location = new System.Drawing.Point(528, 17);
+            this.btn_article_toSearch.Name = "btn_article_toSearch";
+            this.btn_article_toSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toSearch.TabIndex = 24;
+            this.btn_article_toSearch.Text = "Search";
+            this.btn_article_toSearch.UseVisualStyleBackColor = true;
+            this.btn_article_toSearch.Click += new System.EventHandler(this.btn_article_toSearch_Click);
+            // 
+            // btn_article_toHome
+            // 
+            this.btn_article_toHome.Location = new System.Drawing.Point(187, 32);
+            this.btn_article_toHome.Name = "btn_article_toHome";
+            this.btn_article_toHome.Size = new System.Drawing.Size(75, 23);
+            this.btn_article_toHome.TabIndex = 23;
+            this.btn_article_toHome.Text = "Home";
+            this.btn_article_toHome.UseVisualStyleBackColor = true;
+            this.btn_article_toHome.Click += new System.EventHandler(this.btn_article_toHome_Click_1);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Location = new System.Drawing.Point(285, 142);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(272, 103);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
+            // 
+            // article_content
+            // 
+            this.article_content.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_content.Location = new System.Drawing.Point(49, 310);
+            this.article_content.Name = "article_content";
+            this.article_content.Size = new System.Drawing.Size(710, 127);
+            this.article_content.TabIndex = 21;
+            this.article_content.Text = "";
+            // 
+            // article_date
+            // 
+            this.article_date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_date.AutoSize = true;
+            this.article_date.Location = new System.Drawing.Point(505, 271);
+            this.article_date.Name = "article_date";
+            this.article_date.Size = new System.Drawing.Size(30, 13);
+            this.article_date.TabIndex = 20;
+            this.article_date.Text = "Date";
+            // 
+            // article_source
+            // 
+            this.article_source.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_source.AutoSize = true;
+            this.article_source.Location = new System.Drawing.Point(396, 271);
+            this.article_source.Name = "article_source";
+            this.article_source.Size = new System.Drawing.Size(41, 13);
+            this.article_source.TabIndex = 19;
+            this.article_source.Text = "Source";
+            // 
+            // article_author
+            // 
+            this.article_author.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_author.AutoSize = true;
+            this.article_author.Location = new System.Drawing.Point(282, 271);
+            this.article_author.Name = "article_author";
+            this.article_author.Size = new System.Drawing.Size(38, 13);
+            this.article_author.TabIndex = 18;
+            this.article_author.Text = "Author";
+            // 
+            // article_description
+            // 
+            this.article_description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_description.Location = new System.Drawing.Point(11, 248);
+            this.article_description.Name = "article_description";
+            this.article_description.Size = new System.Drawing.Size(776, 23);
+            this.article_description.TabIndex = 17;
+            this.article_description.Text = "Description";
+            this.article_description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // article_title
+            // 
+            this.article_title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_title.Location = new System.Drawing.Point(11, 90);
+            this.article_title.Name = "article_title";
+            this.article_title.Size = new System.Drawing.Size(776, 16);
+            this.article_title.TabIndex = 16;
+            this.article_title.Text = "Title";
+            this.article_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(285, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
+            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel4.Location = new System.Drawing.Point(11, 106);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(783, 23);
+            this.linkLabel4.TabIndex = 26;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "ah";
+            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // Form1
             // 
@@ -756,8 +813,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel_article);
-            this.Controls.Add(this.Home_Panel);
             this.Controls.Add(this.Login_Panel);
             this.Name = "Form1";
             this.Text = "Login";
@@ -774,16 +829,16 @@
             this.preferences_panel.PerformLayout();
             this.search_panel.ResumeLayout(false);
             this.search_panel.PerformLayout();
-            this.panel_article.ResumeLayout(false);
-            this.panel_article.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel_article.ResumeLayout(false);
+            this.panel_article.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -854,6 +909,7 @@
         private System.Windows.Forms.Label article_description;
         private System.Windows.Forms.Label article_title;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.LinkLabel linkLabel4;
     }
 }
 
