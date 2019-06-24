@@ -43,6 +43,11 @@ namespace Headline
         string title3 = "";
         string content3 = "";
         string image3;
+
+        string favoriteKeyword;
+        string favoriteCountry;
+        string initURL;
+
         #endregion
 
 
@@ -83,8 +88,24 @@ namespace Headline
                     Login_Panel.Visible = true;
                     Registration_Panel.Visible = true;
                     Home_Panel.Visible = true; // on affiche le panel home
+                    reader.Close();
 
                     this.Text = "Home"; // on change le text du form sur home
+                    string sqlpref = "SELECT favoriteKeyword,favoriteCountry FROM Users WHERE Username='" + textBox_username.Text + "'";
+                    SqlDataReader retrievePref = DB.Instance.GetDataReader(sqlpref);
+                    while (retrievePref.Read())
+                    {
+                        favoriteKeyword = retrievePref.GetString(0);
+                        favoriteCountry = retrievePref.GetString(1);
+
+                    }
+                    retrievePref.Close();
+
+                    initapi();
+                   
+
+
+
 
                 }
                 else
@@ -94,7 +115,7 @@ namespace Headline
                     textBox_password.Text = "";
                 }
 
-                reader.Close();
+                
             }
         }
 
@@ -106,6 +127,95 @@ namespace Headline
             Registration_Panel.Visible = true; // on affiche le panel pour s'enregistrer
 
         }
+
+
+
+        private void initapi()
+        {
+
+
+            if (favoriteCountry !="" || favoriteKeyword !="") {
+
+
+                 initURL = "https://newsapi.org/v2/top-headlines?" + "q=" + favoriteKeyword + "&country=" +
+    favoriteCountry +
+    "&apiKey=fba415c197974798bd1833b9f86de604";
+            }
+            else
+            {
+                 initURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=fba415c197974798bd1833b9f86de604";
+            }
+
+
+
+
+
+            var json = new WebClient().DownloadString(initURL);
+
+
+
+            var jPerson = JsonConvert.DeserializeObject<dynamic>(json);
+
+            var i = 1;
+            foreach (var num in jPerson.articles)
+            {
+
+
+                if (i == 1)
+                {
+                    source1 = num.source.name;
+                    author1 = num.author;
+                    content1 = num.content;
+                    date1 = num.publishedAt;
+                    description1 = num.description;
+                    title1 = num.title;
+                    image1 = num.urlToImage;
+
+                    pictureBoxArticle1.ImageLocation = num.urlToImage;
+                    titlehome1.Text = num.title;
+
+
+
+
+
+                }
+                else if (i == 2)
+                {
+
+                    source2 = num.source.name;
+                    author2 = num.author;
+                    content2 = num.content;
+                    date2 = num.publishedAt;
+                    description2 = num.description;
+                    title2 = num.title;
+                    image2 = num.urlToImage;
+
+                    pictureBoxArticle2.ImageLocation = num.urlToImage;
+                    titlehome2.Text = num.title;
+                }
+                else if (i == 3)
+                {
+
+                    source3 = num.source.name;
+                    author3 = num.author;
+                    content3 = num.content;
+                    date3 = num.publishedAt;
+                    description3 = num.description;
+                    title3 = num.title;
+                    image3 = num.urlToImage;
+
+                    pictureBoxArticle3.ImageLocation = num.urlToImage;
+                    titlehome3.Text = num.title;
+                }
+
+                i++;
+
+
+            }
+
+
+        }
+
 
         #endregion
 
@@ -247,16 +357,19 @@ namespace Headline
         #region Preferences page
         // Preferences Page
 
-        private void butn_home_pref_Click_1(object sender, EventArgs e)
+        private void butn_home_pref_Click(object sender, EventArgs e)
         {
             this.Text = "Home";
             preferences_panel.Visible = false;
             search_panel.Visible = false;
         }
 
-        private void btn_save_pref_Click_1(object sender, EventArgs e)
+        private void btn_save_pref_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not Implemented Yet");
+            string sql = "UPDATE Users SET favoriteKeyword='" + textBox_keyword_pref.Text + "', favoriteCountry='" + textBox_country_pref.Text + "' WHERE Username='" + textBox_username.Text + "'";
+            SqlDataReader updatePref = DB.Instance.GetDataReader(sql);
+            MessageBox.Show("Update Preferences succes");
+            updatePref.Close();
 
         }
         #endregion
@@ -264,14 +377,14 @@ namespace Headline
         #region Search page
         // Search Page
 
-        private void button_home_from_search_Click_1(object sender, EventArgs e)
+        private void button_home_from_search_Click(object sender, EventArgs e)
         {
             this.Text = "Home";
             search_panel.Visible = false;
             preferences_panel.Visible = false;
         }
 
-        private void button_make_search_Click_1(object sender, EventArgs e)
+        private void button_make_search_Click(object sender, EventArgs e)
         {
             callapi();
         }
@@ -354,7 +467,7 @@ namespace Headline
                 MessageBox.Show("You cannot search with country and source parameters at the same time");
             }else if (param<1)
             {
-                MessageBox.Show("You need to have one parameter at least");
+              //  MessageBox.Show("You need to have one parameter at least");
             }
             else
             {
@@ -433,11 +546,15 @@ namespace Headline
            
         }
 
+
+
+     
+
         #endregion
 
-        
 
-        private void button_from_search_to_pref_Click(object sender, EventArgs e)
+
+        private void button_from_search_to_pref_Click_1(object sender, EventArgs e)
         {
             this.Text = "Preferences";
             search_panel.Visible = false;
@@ -447,20 +564,20 @@ namespace Headline
 
         #region Article page
         // Article Page
-        private void btn_article_toSearch_Click_1(object sender, EventArgs e)
+        private void btn_article_toSearch_Click(object sender, EventArgs e)
         {
             this.Text = "Search";
             panel_article.Visible = false;
         }
 
-        private void btn_article_toPref_Click_1(object sender, EventArgs e)
+        private void btn_article_toPref_Click(object sender, EventArgs e)
         {
             this.Text = "Preferences";
             panel_article.Visible = false;
             search_panel.Visible = false;
         }
 
-        private void btn_article_toHome_Click(object sender, EventArgs e)
+        private void btn_article_toHome_Click_1(object sender, EventArgs e)
         {
             this.Text = "Home";
             panel_article.Visible = false;
@@ -472,11 +589,5 @@ namespace Headline
 
         #endregion
 
-        private void panel_article_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
     }
 }
