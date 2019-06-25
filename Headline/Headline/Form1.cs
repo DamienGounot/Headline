@@ -311,6 +311,13 @@ namespace Headline
 
                     MessageBox.Show("Your account has been created succesfully");
                     readerInsert.Close();
+                    this.Text = "Login";
+                    Registration_Panel.Visible = false;
+                    username.Text = "";
+                    email.Text = "";
+                    password.Text = "";
+                    confirm.Text = "";
+
 
 
                 }
@@ -412,6 +419,7 @@ namespace Headline
             SqlDataReader updatePref = DB.Instance.GetDataReader(sql);
             MessageBox.Show("Update Preferences succes");
             updatePref.Close();
+            preferences_panel.Visible = false;
 
         }
         #endregion
@@ -428,7 +436,15 @@ namespace Headline
 
         private void button_make_search_Click(object sender, EventArgs e)
         {
-            callapi();
+            if (textBox_keyword_search.Text == "" && textBox_country_search.Text == "" && textBox_source_search.Text == "")
+            {
+                MessageBox.Show("Error : you need to fill a field");
+            }
+            else
+            {
+                callapi();
+
+            }
         }
 
 
@@ -520,7 +536,9 @@ namespace Headline
                     "apiKey=fba415c197974798bd1833b9f86de604";
                // MessageBox.Show(url);
                 var json = new WebClient().DownloadString(url);
-                MessageBox.Show("Search Ok");
+                //MessageBox.Show("Search Ok");
+                search_panel.Visible = false;
+                preferences_panel.Visible = false;
 
 
 
