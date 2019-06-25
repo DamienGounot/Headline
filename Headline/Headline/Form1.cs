@@ -59,6 +59,7 @@ namespace Headline
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -244,7 +245,7 @@ namespace Headline
 
         // Registration Page
 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        private void buttonRegister_Click_1(object sender, EventArgs e)
         {
             bool error = false;
             if (username.Text == "" || email.Text == "" || password.Text == "" || confirm.Text == "")
@@ -258,6 +259,8 @@ namespace Headline
             {
                 MessageBox.Show("Error : password not match");
                 error = true;
+                password.Text = "";
+                confirm.Text = "";
             }
 
             if (!error)
@@ -275,6 +278,7 @@ namespace Headline
                 {
                     MessageBox.Show("this username is already used");
                     error = true;
+                    username.Text = "";
                 }
 
                 reader.Close();
@@ -290,14 +294,15 @@ namespace Headline
                 {
                     MessageBox.Show("this email is already used");
                     error = true;
+                    email.Text = "";
                 }
 
                 readerMail.Close();
 
                 if (!error)
                 {
-
-                    string insertQuerry = "INSERT INTO Users (username, email, password) VALUES ('" + username.Text + "','" + email.Text + "','" + password.Text + "')";
+                    string space = "";
+                    string insertQuerry = "INSERT INTO Users (username, email, password, favoriteKeyword, favoriteCountry) VALUES ('" + username.Text + "','" + email.Text + "','" + password.Text + "','"+ space +"','"+ space +"')";
 
                     // MySqlCommand insertNewUser = new MySqlCommand(insertQuerry, connection);
                     //MySqlDataReader readerInsert = insertNewUser.ExecuteReader();
@@ -307,6 +312,7 @@ namespace Headline
                     MessageBox.Show("Your account has been created succesfully");
                     readerInsert.Close();
 
+
                 }
 
 
@@ -314,10 +320,14 @@ namespace Headline
 
         }
 
-        private void button_home_from_reg_Click(object sender, EventArgs e)
+        private void button_home_from_reg_Click_1(object sender, EventArgs e)
         {
             this.Text = "Login";
             Registration_Panel.Visible = false;
+            username.Text = "";
+            email.Text = "";
+            password.Text = "";
+            confirm.Text = "";
 
         }
 
@@ -327,14 +337,14 @@ namespace Headline
         #region Home page
         // Home Page
 
-        private void btn_Search_Click_1(object sender, EventArgs e)
+        private void btn_Search_Click(object sender, EventArgs e)
         {
             this.Text = "Search";
             preferences_panel.Visible = true;
             search_panel.Visible = true;
         }
 
-        private void btn_Pref_Click_1(object sender, EventArgs e)
+        private void btn_Pref_Click(object sender, EventArgs e)
         {
             this.Text = "Preferences";
             preferences_panel.Visible = true;
@@ -342,7 +352,7 @@ namespace Headline
 
 
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             showarticle(source1, author1, content1, date1, description1, title1,image1,url1);
             this.Text = "Article";
@@ -355,7 +365,7 @@ namespace Headline
 
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel2_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             showarticle(source2, author2, content2, date2, description2, title2,image2,url2);
             this.Text = "Article";
@@ -365,7 +375,7 @@ namespace Headline
             urlweb = url2;
         }
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel3_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             showarticle(source3, author3, content3, date3, description3, title3,image3,url3);
             this.Text = "Article";
@@ -375,19 +385,28 @@ namespace Headline
             urlweb = url3;
         }
 
+        private void btn_disconnect_Click_1(object sender, EventArgs e)
+        {
+            this.Text = "Login";
+            Home_Panel.Visible = false;
+            Registration_Panel.Visible = false;
+            textBox_username.Text = "";
+            textBox_password.Text = "";
+        }
+
         #endregion
 
         #region Preferences page
         // Preferences Page
 
-        private void butn_home_pref_Click(object sender, EventArgs e)
+        private void butn_home_pref_Click_1(object sender, EventArgs e)
         {
             this.Text = "Home";
             preferences_panel.Visible = false;
             search_panel.Visible = false;
         }
 
-        private void btn_save_pref_Click(object sender, EventArgs e)
+        private void btn_save_pref_Click_1(object sender, EventArgs e)
         {
             string sql = "UPDATE Users SET favoriteKeyword='" + textBox_keyword_pref.Text + "', favoriteCountry='" + textBox_country_pref.Text + "' WHERE Username='" + textBox_username.Text + "'";
             SqlDataReader updatePref = DB.Instance.GetDataReader(sql);
@@ -499,8 +518,9 @@ namespace Headline
                 var url = "https://newsapi.org/v2/top-headlines?" + totalkeyword +
                     totalcountry + totalsource +
                     "apiKey=fba415c197974798bd1833b9f86de604";
-                //MessageBox.Show(url);
+               // MessageBox.Show(url);
                 var json = new WebClient().DownloadString(url);
+                MessageBox.Show("Search Ok");
 
 
 
@@ -664,7 +684,7 @@ namespace Headline
             search_panel.Visible = false;
         }
 
-        private void btn_article_toHome_Click_1(object sender, EventArgs e)
+        private void btn_article_toHome_Click(object sender, EventArgs e)
         {
             this.Text = "Home";
             panel_article.Visible = false;
@@ -673,17 +693,21 @@ namespace Headline
             Home_Panel.Visible = true;
         }
 
-
-        #endregion
-
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(urlweb);
         }
 
-        private void preferences_panel_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
+
+
+
+
+
+
+
+
+        #endregion
+
     }
 }
