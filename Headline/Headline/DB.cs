@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    class DB
+namespace Headline
+{
+   public class DB
     {
-        private static DB instance;
+        public static DB instance;
 
         public static DB Instance
         {
@@ -56,5 +58,7 @@ using System.Threading.Tasks;
             SqlCommand command = new SqlCommand(sql, connection);
             return command.ExecuteNonQuery();
         }
-    
+
+    }
+
 }
