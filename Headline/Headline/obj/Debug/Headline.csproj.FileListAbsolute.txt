@@ -2,7 +2,6 @@ C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Headline.exe.config
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Headline.exe
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Headline.pdb
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csprojAssemblyReference.cache
-C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Form1.resources
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Properties.Resources.resources
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.GenerateResource.cache
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.CoreCompileInputs.cache
@@ -92,3 +91,9 @@ C:\Users\Damien\Desktop\r190E6-master\Headline\Headline\obj\Debug\Headline.Login
 C:\Users\Damien\Desktop\r190E6-master\Headline\Headline\obj\Debug\Headline.Preferences.resources
 C:\Users\Damien\Desktop\r190E6-master\Headline\Headline\obj\Debug\Headline.Registration.resources
 C:\Users\Damien\Desktop\r190E6-master\Headline\Headline\obj\Debug\Headline.Search.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Article.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Home.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Login.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Preferences.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Registration.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Search.resources

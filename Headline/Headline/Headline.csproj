@@ -88,7 +88,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Init.cs" />
+    <Compile Include="API.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

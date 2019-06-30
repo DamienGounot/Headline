@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Headline
 {
-   public class DB
+    public class DB
     {
-        public static DB instance;
+        private static DB instance;
 
         public static DB Instance
         {
@@ -57,6 +57,111 @@ namespace Headline
         {
             SqlCommand command = new SqlCommand(sql, connection);
             return command.ExecuteNonQuery();
+        }
+
+        private string IsSetUsername(string username)
+        {
+            string sql = "SELECT * FROM Users WHERE Username='" + username + "'";
+            return sql;
+        }
+
+        public bool CheckUserNotRegistered(string username)
+        {
+            SqlDataReader reader = DB.Instance.GetDataReader(
+                DB.Instance.IsSetUsername(username));
+
+            if (reader.Read()) // si user exist
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
+
+        }
+
+        private string IsSetEmail(string email){
+
+            string querryMail = "SELECT * FROM Users WHERE email='" + email + "'";
+            return querryMail;
+        }
+
+        public bool CheckEmailNotRegistered(string email)
+        {
+            SqlDataReader mailReader = DB.Instance.GetDataReader(DB.Instance.IsSetEmail(email));
+
+            if (mailReader.Read())
+            {
+                mailReader.Close();
+                return true;
+            }
+            else
+            {
+
+                mailReader.Close();
+                return false;
+            }
+        }
+
+
+
+        public void InsertNewUser(string username, string email, string password)
+        {
+            string space = " ";
+            string insertQuerry = "INSERT INTO Users (username, email, password, favoriteKeyword, favoriteCountry) VALUES ('" + username + "','" + email + "','" + password + "','" + space + "','" + space + "')";
+            SqlDataReader readerInsert = DB.Instance.GetDataReader(insertQuerry);
+            readerInsert.Close();
+        }
+
+        public void UpdateUserPref(string username, string keyword, string country)
+        {
+            string sql = "UPDATE Users SET favoriteKeyword='" + keyword + "', favoriteCountry='" + country + "' WHERE Username='" + username + "'";
+            SqlDataReader updatePref = DB.Instance.GetDataReader(sql);
+            updatePref.Close();
+
+        }
+
+        public bool CheckLogin(string username,string password)
+        {
+            string sql = "SELECT * FROM Users WHERE Username='" + username + "' AND Password='" + password + "'";
+            SqlDataReader reader = DB.Instance.GetDataReader(sql);
+
+            if (reader.Read())
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
+        }
+
+
+        public string GetFavoriteCountry(string username)
+        {
+            string sqlpref = "SELECT favoriteCountry FROM Users WHERE Username='" + username + "'";
+            SqlDataReader retrievePref = DB.Instance.GetDataReader(sqlpref);
+            string country;
+            retrievePref.Read();
+            country = retrievePref.GetString(0);
+            retrievePref.Close();
+            return country;
+        }
+
+        public string GetFavoriteKeyword(string username)
+        {
+            string sqlpref = "SELECT favoriteKeyword FROM Users WHERE Username='" + username + "'";
+            SqlDataReader retrievePref = DB.Instance.GetDataReader(sqlpref);
+            string keyword;
+            retrievePref.Read();
+            keyword = retrievePref.GetString(0);
+            retrievePref.Close();
+            return keyword;
         }
 
     }

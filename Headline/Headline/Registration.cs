@@ -51,24 +51,13 @@ namespace Headline
             this.Hide();
         }
 
-
-
-
-
-
-
-        #region Registration page
-
-        // Registration Page
-
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             bool error = false;
-            if (username.Text == "" || email.Text == "" || password.Text == "" || confirm.Text == "")
+            if (isNotCompleted())
             {
                 MessageBox.Show("Error : every fields are required");
                 error = true;
-
             }
 
             if (password.Text != confirm.Text)
@@ -82,79 +71,60 @@ namespace Headline
             if (!error)
             {
 
-
-                error = false;
-                // MySqlCommand querry = new MySqlCommand("SELECT * FROM Users WHERE Username='" + username.Text + "'", connection);
-                // MySqlDataReader reader = querry.ExecuteReader();
-
-                string sql = "SELECT * FROM Users WHERE Username='" + username.Text + "'";
-                SqlDataReader reader = DB.Instance.GetDataReader(sql);
-
-                if (reader.Read()) // si user exist
+                if (DB.Instance.CheckUserNotRegistered(username.Text)) // si user exist
                 {
                     MessageBox.Show("this username is already used");
                     error = true;
                     username.Text = "";
                 }
 
-                reader.Close();
-
-                // MySqlCommand querryMail = new MySqlCommand("SELECT * FROM Users WHERE email='" + email.Text + "'", connection);
-                //MySqlDataReader readerMail = querryMail.ExecuteReader();
-
-                string querryMail = "SELECT * FROM Users WHERE email='" + email.Text + "'";
-                SqlDataReader readerMail = DB.Instance.GetDataReader(querryMail);
 
 
-                if (readerMail.Read()) // si mail exist
+                if (DB.Instance.CheckEmailNotRegistered(email.Text)) // si mail exist
                 {
                     MessageBox.Show("this email is already used");
                     error = true;
                     email.Text = "";
                 }
 
-                readerMail.Close();
-
                 if (!error)
                 {
-                    string space = "";
-                    string insertQuerry = "INSERT INTO Users (username, email, password, favoriteKeyword, favoriteCountry) VALUES ('" + username.Text + "','" + email.Text + "','" + password.Text + "','" + space + "','" + space + "')";
 
-                    // MySqlCommand insertNewUser = new MySqlCommand(insertQuerry, connection);
-                    //MySqlDataReader readerInsert = insertNewUser.ExecuteReader();
-
-                    SqlDataReader readerInsert = DB.Instance.GetDataReader(insertQuerry);
-
+                    DB.Instance.InsertNewUser(username.Text, email.Text, password.Text);
                     MessageBox.Show("Your account has been created succesfully");
-                    readerInsert.Close();
                     ShowForm(Login.Instance);
-                    username.Text = "";
-                    email.Text = "";
-                    password.Text = "";
-                    confirm.Text = "";
-
-
-
+                    reset();
                 }
-
-
             }
-
         }
 
         private void button_home_from_reg_Click(object sender, EventArgs e)
         {
             ShowForm(Login.Instance);
-            username.Text = "";
-            email.Text = "";
-            password.Text = "";
-            confirm.Text = "";
+            reset();
 
         }
 
 
-        #endregion
 
+        private void reset()
+        {
+            username.Text = "";
+            email.Text = "";
+            password.Text = "";
+            confirm.Text = "";
+        }
 
+        private bool isNotCompleted()
+        {
+            if(username.Text == "" || email.Text == "" || password.Text == "" || confirm.Text == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

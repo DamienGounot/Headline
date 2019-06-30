@@ -54,9 +54,6 @@ namespace Headline
             this.Hide();
         }
 
-        #region Preferences page
-        // Preferences Page
-
         private void butn_home_pref_Click(object sender, EventArgs e)
         {
             ShowForm(Home.Instance);
@@ -64,15 +61,11 @@ namespace Headline
 
         private void btn_save_pref_Click(object sender, EventArgs e)
         {
-
-            string sql = "UPDATE Users SET favoriteKeyword='" + textBox_keyword_pref.Text + "', favoriteCountry='" + textBox_country_pref.Text + "' WHERE Username='" + Init.Instance.username + "'";
-            SqlDataReader updatePref = DB.Instance.GetDataReader(sql);
+            DB.Instance.UpdateUserPref(Login.username, Preferences.Instance.textBox_keyword_pref.Text, Preferences.Instance.textBox_country_pref.Text);
             MessageBox.Show("Update Preferences succes");
-            updatePref.Close();
             ShowForm(Home.Instance);
 
         }
-        #endregion
 
     }
 }

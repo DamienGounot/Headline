@@ -53,7 +53,17 @@ namespace Headline
             this.Hide();
         }
 
-
+        private void isFill()
+        {
+            if (this.textBox_keyword_search.Text == "" && this.textBox_country_search.Text == "" && this.textBox_source_search.Text == "")
+            {
+                MessageBox.Show("Error : you need to fill a field");
+            }
+            else
+            {
+                callapi();
+            }
+        }
 
 
 
@@ -67,14 +77,7 @@ namespace Headline
 
         private void button_make_search_Click(object sender, EventArgs e)
         {
-            if (textBox_keyword_search.Text == "" && textBox_country_search.Text == "" && textBox_source_search.Text == "")
-            {
-                MessageBox.Show("Error : you need to fill a field");
-            }
-            else
-            {
-                callapi();
-            }
+            isFill();
         }
 
 
@@ -181,17 +184,17 @@ namespace Headline
 
                     if (i == 1)
                     {
-                        Init.Instance.source1 = num.source.name;
-                        Init.Instance.author1 = num.author;
-                        Init.Instance.content1 = num.content;
-                        Init.Instance.date1 = num.publishedAt;
-                        Init.Instance.description1 = num.description;
-                        Init.Instance.title1 = num.title;
-                        Init.Instance.image1 = num.urlToImage;
+                        API.Instance.source1 = num.source.name;
+                        API.Instance.author1 = num.author;
+                        API.Instance.content1 = num.content;
+                        API.Instance.date1 = num.publishedAt;
+                        API.Instance.description1 = num.description;
+                        API.Instance.title1 = num.title;
+                        API.Instance.image1 = num.urlToImage;
 
-                        Home.Instance.SetArticlesLink1(Init.Instance.title1, Init.Instance.image1);
+                        Home.Instance.SetArticlesLink1(API.Instance.title1, API.Instance.image1);
 
-                        Init.Instance.url1 = num.url;
+                        API.Instance.url1 = num.url;
 
 
 
@@ -202,31 +205,31 @@ namespace Headline
                     else if (i == 2)
                     {
 
-                        Init.Instance.source2 = num.source.name;
-                        Init.Instance.author2 = num.author;
-                        Init.Instance.content2 = num.content;
-                        Init.Instance.date2 = num.publishedAt;
-                        Init.Instance.description2 = num.description;
-                        Init.Instance.title2 = num.title;
-                        Init.Instance.image2 = num.urlToImage;
+                        API.Instance.source2 = num.source.name;
+                        API.Instance.author2 = num.author;
+                        API.Instance.content2 = num.content;
+                        API.Instance.date2 = num.publishedAt;
+                        API.Instance.description2 = num.description;
+                        API.Instance.title2 = num.title;
+                        API.Instance.image2 = num.urlToImage;
 
-                        Home.Instance.SetArticlesLink2(Init.Instance.title2, Init.Instance.image2);
-                        Init.Instance.url2 = num.url;
+                        Home.Instance.SetArticlesLink2(API.Instance.title2, API.Instance.image2);
+                        API.Instance.url2 = num.url;
                     }
                     else if (i == 3)
                     {
 
-                        Init.Instance.source3 = num.source.name;
-                        Init.Instance.author3 = num.author;
-                        Init.Instance.content3 = num.content;
-                        Init.Instance.date3 = num.publishedAt;
-                        Init.Instance.description3 = num.description;
-                        Init.Instance.title3 = num.title;
-                        Init.Instance.image3 = num.urlToImage;
+                        API.Instance.source3 = num.source.name;
+                        API.Instance.author3 = num.author;
+                        API.Instance.content3 = num.content;
+                        API.Instance.date3 = num.publishedAt;
+                        API.Instance.description3 = num.description;
+                        API.Instance.title3 = num.title;
+                        API.Instance.image3 = num.urlToImage;
 
-                        Home.Instance.SetArticlesLink3(Init.Instance.title3, Init.Instance.image3);
+                        Home.Instance.SetArticlesLink3(API.Instance.title3, API.Instance.image3);
 
-                        Init.Instance.url3 = num.url;
+                        API.Instance.url3 = num.url;
                     }
 
                     i++;
@@ -235,48 +238,14 @@ namespace Headline
 
                 }
 
-
-
                 if (jPerson.totalResults == 1)
                 {
-                    Init.Instance.source2 = "";
-                    Init.Instance.author2 = "";
-                    Init.Instance.content2 = "";
-                    Init.Instance.date2 = "";
-                    Init.Instance.description2 = "";
-                    Init.Instance.title2 = "";
-                    Init.Instance.image2 = "";
-
-                    Home.Instance.SetArticlesLink2("", "");
-                    Init.Instance.url2 = "";
-
-                    Init.Instance.source3 = "";
-                    Init.Instance.author3 = "";
-                    Init.Instance.content3 = "";
-                    Init.Instance.date3 = "";
-                    Init.Instance.description3 = "";
-                    Init.Instance.title3 = "";
-                    Init.Instance.image3 = "";
-
-                    Home.Instance.SetArticlesLink3("", "");
-                    Init.Instance.url3 = "";
-
-
+                    Article.Instance.ResetArticle2();
+                    Article.Instance.ResetArticle3();
                 }
                 else if (jPerson.totalResults == 2)
                 {
-                    Init.Instance.source3 = "";
-                    Init.Instance.author3 = "";
-                    Init.Instance.content3 = "";
-                    Init.Instance.date3 = "";
-                    Init.Instance.description3 = "";
-                    Init.Instance.title3 = "";
-                    Init.Instance.image3 = "";
-
-                    Home.Instance.SetArticlesLink3("", "");
-                    Init.Instance.url3 = "";
-
-
+                    Article.Instance.ResetArticle3();
                 }
 
 
@@ -289,11 +258,8 @@ namespace Headline
 
         public void showarticle(string source, string author, string content, string date, string description, string title, string image, string url)
         {
-
             callapi();
             Article.Instance.FeedArticle(source,author,content,date,description,title,image,url);
-
-            
         }
 
 
@@ -302,6 +268,5 @@ namespace Headline
         {
             ShowForm(Preferences.Instance);
         }
-        #endregion
     }
 }

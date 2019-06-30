@@ -77,7 +77,7 @@ namespace Headline
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(Init.Instance.urlweb);
+            Process.Start(API.Instance.urlweb);
         }
         #endregion
 
@@ -92,6 +92,33 @@ namespace Headline
             Instance.pictureBox6.ImageLocation = image;
             Instance.linkLabel4.Text = url;
            
+        }
+
+
+        public void ResetArticle3()
+        {
+            API.Instance.source3 = "";
+            API.Instance.author3 = "";
+            API.Instance.content3 = "";
+            API.Instance.date3 = "";
+            API.Instance.description3 = "";
+            API.Instance.title3 = "";
+            API.Instance.image3 = "";
+            Home.Instance.SetArticlesLink3("", "");
+            API.Instance.url3 = "";
+        }
+
+        public void ResetArticle2()
+        {
+            API.Instance.source2 = "";
+            API.Instance.author2 = "";
+            API.Instance.content2 = "";
+            API.Instance.date2 = "";
+            API.Instance.description2 = "";
+            API.Instance.title2 = "";
+            API.Instance.image2 = "";
+            Home.Instance.SetArticlesLink2("", "");
+            API.Instance.url2 = "";
         }
 
     }

@@ -48,8 +48,7 @@ namespace Headline
             _instance = null;
         }
 
-        #region Home page
-        // Home Page
+    
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
@@ -85,9 +84,9 @@ namespace Headline
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Search.Instance.showarticle(Init.Instance.source1, Init.Instance.author1, Init.Instance.content1, Init.Instance.date1, Init.Instance.description1, Init.Instance.title1, Init.Instance.image1, Init.Instance.url1);
+            Search.Instance.showarticle(API.Instance.source1, API.Instance.author1, API.Instance.content1, API.Instance.date1, API.Instance.description1, API.Instance.title1, API.Instance.image1, API.Instance.url1);
             ShowForm(Article.Instance);
-            Init.Instance.urlweb = Init.Instance.url1;
+            API.Instance.urlweb = API.Instance.url1;
 
 
 
@@ -95,16 +94,16 @@ namespace Headline
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           Search.Instance.showarticle(Init.Instance.source2, Init.Instance.author2, Init.Instance.content2, Init.Instance.date2, Init.Instance.description2, Init.Instance.title2, Init.Instance.image2, Init.Instance.url2);
+           Search.Instance.showarticle(API.Instance.source2, API.Instance.author2, API.Instance.content2, API.Instance.date2, API.Instance.description2, API.Instance.title2, API.Instance.image2, API.Instance.url2);
             ShowForm(Article.Instance);
-            Init.Instance.urlweb = Init.Instance.url2;
+            API.Instance.urlweb = API.Instance.url2;
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Search.Instance.showarticle(Init.Instance.source3, Init.Instance.author3, Init.Instance.content3, Init.Instance.date3, Init.Instance.description3, Init.Instance.title3, Init.Instance.image3, Init.Instance.url3);
+            Search.Instance.showarticle(API.Instance.source3, API.Instance.author3, API.Instance.content3, API.Instance.date3, API.Instance.description3, API.Instance.title3, API.Instance.image3, API.Instance.url3);
             ShowForm(Article.Instance);
-            Init.Instance.urlweb = Init.Instance.url3;
+            API.Instance.urlweb = API.Instance.url3;
         }
 
         private void btn_disconnect_Click(object sender, EventArgs e)
@@ -113,7 +112,6 @@ namespace Headline
 
         }
 
-        #endregion
 
     }
 }
