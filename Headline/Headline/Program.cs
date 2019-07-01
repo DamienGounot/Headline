@@ -14,10 +14,10 @@ namespace Headline
         [STAThread]
         static void Main()
         {
-            allAPI api = new allAPI();
+            API.AllAPI api = new API.AllAPI();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_form());
+            Application.Run(new FormContainer());
         }
     }
 }
