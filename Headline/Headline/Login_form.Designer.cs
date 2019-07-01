@@ -1,6 +1,6 @@
 ﻿namespace Headline
 {
-    partial class Login
+    partial class Login_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_form));
             this.Login_Panel = new System.Windows.Forms.Panel();
             this.textBox_username = new System.Windows.Forms.TextBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
@@ -54,8 +54,8 @@
             this.Login_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Login_Panel.Location = new System.Drawing.Point(0, 0);
             this.Login_Panel.Name = "Login_Panel";
-            this.Login_Panel.Size = new System.Drawing.Size(800, 450);
-            this.Login_Panel.TabIndex = 8;
+            this.Login_Panel.Size = new System.Drawing.Size(784, 411);
+            this.Login_Panel.TabIndex = 9;
             // 
             // textBox_username
             // 
@@ -80,7 +80,7 @@
             this.button_register.TabIndex = 16;
             this.button_register.Text = "Not a member ? Register now !";
             this.button_register.UseVisualStyleBackColor = true;
-            this.button_register.Click += new System.EventHandler(this.button_register_Click);
+            this.button_register.Click += new System.EventHandler(this.button_register_Click_1);
             // 
             // button_login
             // 
@@ -120,14 +120,15 @@
             this.Label_UserName.TabIndex = 7;
             this.Label_UserName.Text = "UserName :";
             // 
-            // Login
+            // Login_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.Login_Panel);
-            this.Name = "Login";
-            this.Text = "Login";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Login_form";
+            this.Text = "Login_form";
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();

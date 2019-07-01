@@ -14,9 +14,10 @@ namespace Headline
         [STAThread]
         static void Main()
         {
+            allAPI api = new allAPI();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Login_form());
         }
     }
 }

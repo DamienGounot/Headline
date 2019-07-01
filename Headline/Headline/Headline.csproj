@@ -75,25 +75,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Article.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Article.Designer.cs">
-      <DependentUpon>Article.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ALLAPI.cs" />
+    <Compile Include="article1.cs" />
+    <Compile Include="CallAPI.cs" />
+    <Compile Include="CreateUrl.cs" />
     <Compile Include="DB.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="GetResearch.cs" />
+    <Compile Include="Home_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Home_form.Designer.cs">
+      <DependentUpon>Home_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="API.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Login_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Login_form.Designer.cs">
+      <DependentUpon>Login_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Preferences.cs">
       <SubType>Form</SubType>
@@ -115,14 +113,17 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Article.resx">
-      <DependentUpon>Article.cs</DependentUpon>
+    <Compile Include="Show_article.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_article.Designer.cs">
+      <DependentUpon>Show_article.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Home_form.resx">
+      <DependentUpon>Home_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Login_form.resx">
+      <DependentUpon>Login_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences.resx">
       <DependentUpon>Preferences.cs</DependentUpon>
@@ -141,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_article.resx">
+      <DependentUpon>Show_article.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

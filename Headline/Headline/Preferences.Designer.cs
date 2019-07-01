@@ -54,8 +54,8 @@
             this.preferences_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preferences_panel.Location = new System.Drawing.Point(0, 0);
             this.preferences_panel.Name = "preferences_panel";
-            this.preferences_panel.Size = new System.Drawing.Size(800, 450);
-            this.preferences_panel.TabIndex = 31;
+            this.preferences_panel.Size = new System.Drawing.Size(850, 506);
+            this.preferences_panel.TabIndex = 32;
             // 
             // textBox_country_pref
             // 
@@ -181,8 +181,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(850, 506);
             this.Controls.Add(this.preferences_panel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Preferences";
             this.Text = "Preferences";
             this.preferences_panel.ResumeLayout(false);

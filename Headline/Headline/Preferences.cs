@@ -47,25 +47,24 @@ namespace Headline
 
 
 
-        private void ShowForm(Form frm)
+        private void goHome(int count, string keyword, string country, string sources)
         {
-            frm.Show();
-            frm.Activate();
+            Home_form Home = new Home_form(count, keyword, country, sources);
+            Home.Show();
             this.Hide();
         }
 
         private void butn_home_pref_Click(object sender, EventArgs e)
         {
-            ShowForm(Home.Instance);
+            goHome(5,Preferences.Instance.textBox_keyword_pref.Text,Preferences.Instance.textBox_country_pref.Text,"");
         }
 
         private void btn_save_pref_Click(object sender, EventArgs e)
         {
-            DB.Instance.UpdateUserPref(Login.username, Preferences.Instance.textBox_keyword_pref.Text, Preferences.Instance.textBox_country_pref.Text);
+            DB.Instance.UpdateUserPref(Login_form.username, textBox_keyword_pref.Text,textBox_country_pref.Text);
             MessageBox.Show("Update Preferences succes");
-            ShowForm(Home.Instance);
+            goHome(5, Preferences.Instance.textBox_keyword_pref.Text, Preferences.Instance.textBox_country_pref.Text, "");
 
         }
-
     }
 }

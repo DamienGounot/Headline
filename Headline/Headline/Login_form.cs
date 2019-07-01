@@ -15,33 +15,29 @@ using System.Diagnostics;
 
 namespace Headline
 {
-    public partial class Login : Form
+    public partial class Login_form : Form
     {
         public static string username;
         public static string favoriteKeyword;
         public static string favoriteCountry;
         public static string initURL;
 
-
-
-        public Login()
+        public Login_form()
         {
             InitializeComponent();
         }
+        public static Login_form _instance;
 
-        public static Login _instance;
-
-        public static Login Instance
+        public static Login_form Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Login();
+                    _instance = new Login_form();
                 return _instance;
 
             }
         }
-
 
         public void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -56,8 +52,13 @@ namespace Headline
             this.Hide();
         }
 
-        public void button_login_Click(object sender, EventArgs e)
+
+
+
+
+        private void button_login_Click(object sender, EventArgs e)
         {
+
             if (textBox_username.Text == "" || textBox_password.Text == "")
             {
                 MessageBox.Show("Error : username and password are required");
@@ -67,38 +68,53 @@ namespace Headline
 
 
 
-                if (DB.Instance.CheckLogin(textBox_username.Text,textBox_password.Text)) // si le login est OK
+                if (DB.Instance.CheckLogin(textBox_username.Text, textBox_password.Text)) // si le login est OK
                 {
                     MessageBox.Show("login succes");
-                    ShowForm(Home.Instance);
-                    Login.username = textBox_username.Text;
-
+                    username = textBox_username.Text;
                     favoriteCountry = DB.Instance.GetFavoriteCountry(username);
                     favoriteKeyword = DB.Instance.GetFavoriteKeyword(username);
-                    API.Instance.initapi();
+
+                    LoginResearch(favoriteCountry, favoriteKeyword);
 
                 }
                 else
                 {
                     MessageBox.Show("Incorrect Username or Password !");
-                    textBox_username.Text = "";
-                    textBox_password.Text = "";
+                    reset();
                 }
 
 
             }
         }
 
-        public void button_register_Click(object sender, EventArgs e)
+        private void button_register_Click_1(object sender, EventArgs e)
         {
             ShowForm(Registration.Instance);
+
         }
 
+        private void LoginResearch(string favoriteCountry,string favoriteKeyword)
+        {
+            if ((favoriteCountry == " " || favoriteKeyword == " " ) || (favoriteCountry == "" && favoriteKeyword == ""))
+            {
+                Home_form mainform = new Home_form(1, "", "us", "");
+                this.Hide();
+                mainform.Show();
+            }
+            else
+            {
+                Home_form mainform = new Home_form(1, favoriteKeyword, favoriteCountry, "");
+                this.Hide();
+                mainform.Show();
+            }
+        }
 
-
-      
-
-
+        private void reset()
+        {
+            textBox_username.Text = "";
+            textBox_password.Text = "";
+        }
 
  
     }
