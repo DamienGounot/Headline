@@ -30,31 +30,5 @@ namespace Headline
 
         }
 
-        private void btn_article_toSearch_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Search();
-            FormSearch search = new FormSearch();
-            search.MdiParent = this.MdiParent;
-            search.Show();
-            this.Hide();
-        }
-
-        private void btn_article_toHome_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Connexion();
-            FormHome home = new FormHome(5,"keyword","country","sources");
-            home.MdiParent = this.MdiParent;
-            home.Show();
-            this.Hide();
-        }
-
-        private void btn_article_toPref_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Preferences();
-            FormPreferences pref = new FormPreferences();
-            pref.MdiParent = this.MdiParent;
-            pref.Show();
-            this.Hide();
-        }
     }
 }

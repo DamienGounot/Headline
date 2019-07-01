@@ -56,12 +56,6 @@ namespace Headline
             this.Hide();
         }
 
-        private void butn_home_pref_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Connexion();
-            goHome(5,FormPreferences.Instance.textBox_keyword_pref.Text,FormPreferences.Instance.textBox_country_pref.Text,"");
-        }
-
         private void btn_save_pref_Click(object sender, EventArgs e)
         {
             UI.NavigationBar.Instance.Connexion();

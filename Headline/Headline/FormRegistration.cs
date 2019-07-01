@@ -98,12 +98,6 @@ namespace Headline
             }
         }
 
-        private void button_home_from_reg_Click(object sender, EventArgs e)
-        {
-            ShowForm(FormLogin.Instance);
-            reset();
-        }
-
         private void reset()
         {
             username.Text = "";

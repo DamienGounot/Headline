@@ -32,7 +32,6 @@
             this.preferences_panel = new System.Windows.Forms.Panel();
             this.textBox_country_pref = new System.Windows.Forms.ComboBox();
             this.btn_save_pref = new System.Windows.Forms.Button();
-            this.butn_home_pref = new System.Windows.Forms.Button();
             this.textBox_keyword_pref = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             this.preferences_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.preferences_panel.Controls.Add(this.textBox_country_pref);
             this.preferences_panel.Controls.Add(this.btn_save_pref);
-            this.preferences_panel.Controls.Add(this.butn_home_pref);
             this.preferences_panel.Controls.Add(this.textBox_keyword_pref);
             this.preferences_panel.Controls.Add(this.label9);
             this.preferences_panel.Controls.Add(this.label4);
@@ -54,7 +52,7 @@
             this.preferences_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preferences_panel.Location = new System.Drawing.Point(0, 0);
             this.preferences_panel.Name = "preferences_panel";
-            this.preferences_panel.Size = new System.Drawing.Size(850, 506);
+            this.preferences_panel.Size = new System.Drawing.Size(1264, 681);
             this.preferences_panel.TabIndex = 32;
             // 
             // textBox_country_pref
@@ -117,14 +115,14 @@
             "gb",
             "us",
             "ve"});
-            this.textBox_country_pref.Location = new System.Drawing.Point(340, 176);
+            this.textBox_country_pref.Location = new System.Drawing.Point(544, 269);
             this.textBox_country_pref.Name = "textBox_country_pref";
             this.textBox_country_pref.Size = new System.Drawing.Size(121, 21);
             this.textBox_country_pref.TabIndex = 27;
             // 
             // btn_save_pref
             // 
-            this.btn_save_pref.Location = new System.Drawing.Point(367, 333);
+            this.btn_save_pref.Location = new System.Drawing.Point(544, 332);
             this.btn_save_pref.Name = "btn_save_pref";
             this.btn_save_pref.Size = new System.Drawing.Size(75, 23);
             this.btn_save_pref.TabIndex = 22;
@@ -132,19 +130,9 @@
             this.btn_save_pref.UseVisualStyleBackColor = true;
             this.btn_save_pref.Click += new System.EventHandler(this.btn_save_pref_Click);
             // 
-            // butn_home_pref
-            // 
-            this.butn_home_pref.Location = new System.Drawing.Point(282, 333);
-            this.butn_home_pref.Name = "butn_home_pref";
-            this.butn_home_pref.Size = new System.Drawing.Size(75, 23);
-            this.butn_home_pref.TabIndex = 21;
-            this.butn_home_pref.Text = "Go Home";
-            this.butn_home_pref.UseVisualStyleBackColor = true;
-            this.butn_home_pref.Click += new System.EventHandler(this.butn_home_pref_Click);
-            // 
             // textBox_keyword_pref
             // 
-            this.textBox_keyword_pref.Location = new System.Drawing.Point(342, 140);
+            this.textBox_keyword_pref.Location = new System.Drawing.Point(546, 233);
             this.textBox_keyword_pref.Name = "textBox_keyword_pref";
             this.textBox_keyword_pref.Size = new System.Drawing.Size(119, 20);
             this.textBox_keyword_pref.TabIndex = 17;
@@ -152,7 +140,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(285, 178);
+            this.label9.Location = new System.Drawing.Point(489, 271);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 14;
@@ -161,7 +149,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(282, 143);
+            this.label4.Location = new System.Drawing.Point(486, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 13;
@@ -171,7 +159,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(285, 17);
+            this.pictureBox3.Location = new System.Drawing.Point(467, 26);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(237, 62);
             this.pictureBox3.TabIndex = 12;
@@ -181,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 506);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.ControlBox = false;
             this.Controls.Add(this.preferences_panel);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -201,7 +189,6 @@
         private System.Windows.Forms.Panel preferences_panel;
         private System.Windows.Forms.ComboBox textBox_country_pref;
         private System.Windows.Forms.Button btn_save_pref;
-        private System.Windows.Forms.Button butn_home_pref;
         private System.Windows.Forms.TextBox textBox_keyword_pref;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;

@@ -55,35 +55,6 @@ namespace Headline
             }
         }
 
-        public void btn_disconnect_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Deconnexion();
-            FormLogin login = new FormLogin();
-            login.MdiParent = this.MdiParent;
-            login.Show();
-            this.Hide();
-
-
-        }
-
-
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Search();
-            FormSearch search = new FormSearch();
-            search.MdiParent = this.MdiParent;
-            search.Show();
-            this.Hide();
-        }
-
-        private void btn_Pref_Click(object sender, EventArgs e)
-        {
-            UI.NavigationBar.Instance.Preferences();
-            FormPreferences pref = new FormPreferences();
-            pref.MdiParent = this.MdiParent;
-            pref.Show();
-            this.Hide();
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

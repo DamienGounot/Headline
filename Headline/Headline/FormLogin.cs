@@ -88,11 +88,6 @@ namespace Headline
             }
         }
 
-        private void button_register_Click_1(object sender, EventArgs e)
-        {
-            ShowForm(FormRegistration.Instance);
-
-        }
 
         private void LoginResearch(string favoriteCountry,string favoriteKeyword)
         {
