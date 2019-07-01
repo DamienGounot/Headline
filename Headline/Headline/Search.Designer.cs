@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
             this.search_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_country_search = new System.Windows.Forms.ComboBox();
             this.textBox_source_search = new System.Windows.Forms.ComboBox();
             this.button_make_search = new System.Windows.Forms.Button();
@@ -41,27 +42,37 @@
             this.button_from_search_to_pref = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.search_panel.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // search_panel
             // 
-            this.search_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.search_panel.Controls.Add(this.textBox_country_search);
-            this.search_panel.Controls.Add(this.textBox_source_search);
-            this.search_panel.Controls.Add(this.button_make_search);
-            this.search_panel.Controls.Add(this.button_home_from_search);
-            this.search_panel.Controls.Add(this.textBox_keyword_search);
-            this.search_panel.Controls.Add(this.label15);
-            this.search_panel.Controls.Add(this.label14);
-            this.search_panel.Controls.Add(this.label12);
-            this.search_panel.Controls.Add(this.button_from_search_to_pref);
-            this.search_panel.Controls.Add(this.pictureBox4);
+            this.search_panel.Controls.Add(this.panel1);
             this.search_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.search_panel.Location = new System.Drawing.Point(0, 0);
             this.search_panel.Name = "search_panel";
-            this.search_panel.Size = new System.Drawing.Size(800, 450);
+            this.search_panel.Size = new System.Drawing.Size(848, 506);
             this.search_panel.TabIndex = 29;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.textBox_country_search);
+            this.panel1.Controls.Add(this.textBox_source_search);
+            this.panel1.Controls.Add(this.button_make_search);
+            this.panel1.Controls.Add(this.button_home_from_search);
+            this.panel1.Controls.Add(this.textBox_keyword_search);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.button_from_search_to_pref);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(848, 506);
+            this.panel1.TabIndex = 30;
             // 
             // textBox_country_search
             // 
@@ -261,12 +272,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(848, 506);
             this.Controls.Add(this.search_panel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Search";
             this.Text = "Search";
             this.search_panel.ResumeLayout(false);
-            this.search_panel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
@@ -275,6 +288,7 @@
         #endregion
 
         private System.Windows.Forms.Panel search_panel;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox textBox_country_search;
         private System.Windows.Forms.ComboBox textBox_source_search;
         private System.Windows.Forms.Button button_make_search;

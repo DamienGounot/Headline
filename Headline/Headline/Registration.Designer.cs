@@ -63,7 +63,7 @@
             this.Registration_Panel.Location = new System.Drawing.Point(0, 0);
             this.Registration_Panel.Name = "Registration_Panel";
             this.Registration_Panel.Size = new System.Drawing.Size(800, 450);
-            this.Registration_Panel.TabIndex = 18;
+            this.Registration_Panel.TabIndex = 19;
             // 
             // button_home_from_reg
             // 

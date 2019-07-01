@@ -92,7 +92,7 @@ namespace Headline
 
                     DB.Instance.InsertNewUser(username.Text, email.Text, password.Text);
                     MessageBox.Show("Your account has been created succesfully");
-                    ShowForm(Login.Instance);
+                    ShowForm(Login_form.Instance);
                     reset();
                 }
             }
@@ -100,7 +100,7 @@ namespace Headline
 
         private void button_home_from_reg_Click(object sender, EventArgs e)
         {
-            ShowForm(Login.Instance);
+            ShowForm(Login_form.Instance);
             reset();
 
         }
@@ -117,7 +117,7 @@ namespace Headline
 
         private bool isNotCompleted()
         {
-            if(username.Text == "" || email.Text == "" || password.Text == "" || confirm.Text == "")
+            if (username.Text == "" || email.Text == "" || password.Text == "" || confirm.Text == "")
             {
                 return true;
             }
@@ -126,5 +126,6 @@ namespace Headline
                 return false;
             }
         }
+
     }
 }

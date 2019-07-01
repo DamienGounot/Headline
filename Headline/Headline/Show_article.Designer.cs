@@ -1,6 +1,6 @@
 ﻿namespace Headline
 {
-    partial class Article
+    partial class Show_article
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Article));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Show_article));
             this.panel_article = new System.Windows.Forms.Panel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.btn_article_toPref = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.panel_article.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_article.Location = new System.Drawing.Point(0, 0);
             this.panel_article.Name = "panel_article";
-            this.panel_article.Size = new System.Drawing.Size(800, 450);
+            this.panel_article.Size = new System.Drawing.Size(800, 495);
             this.panel_article.TabIndex = 35;
             // 
             // linkLabel4
@@ -74,12 +74,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel4.Location = new System.Drawing.Point(11, 106);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(786, 23);
+            this.linkLabel4.Size = new System.Drawing.Size(785, 23);
             this.linkLabel4.TabIndex = 26;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "ah";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // btn_article_toPref
             // 
@@ -115,9 +114,9 @@
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Location = new System.Drawing.Point(285, 142);
+            this.pictureBox6.Location = new System.Drawing.Point(268, 132);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(275, 103);
+            this.pictureBox6.Size = new System.Drawing.Size(274, 103);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 22;
             this.pictureBox6.TabStop = false;
@@ -129,7 +128,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.article_content.Location = new System.Drawing.Point(49, 310);
             this.article_content.Name = "article_content";
-            this.article_content.Size = new System.Drawing.Size(713, 127);
+            this.article_content.Size = new System.Drawing.Size(712, 171);
             this.article_content.TabIndex = 21;
             this.article_content.Text = "";
             // 
@@ -172,16 +171,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.article_description.Location = new System.Drawing.Point(11, 248);
             this.article_description.Name = "article_description";
-            this.article_description.Size = new System.Drawing.Size(779, 23);
+            this.article_description.Size = new System.Drawing.Size(778, 23);
             this.article_description.TabIndex = 17;
             this.article_description.Text = "Description";
             this.article_description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // article_title
             // 
-            this.article_title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.article_title.Location = new System.Drawing.Point(11, 90);
+            this.article_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.article_title.Location = new System.Drawing.Point(11, 89);
             this.article_title.Name = "article_title";
             this.article_title.Size = new System.Drawing.Size(779, 16);
             this.article_title.TabIndex = 16;
@@ -193,21 +191,22 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.InitialImage = null;
+            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
             this.pictureBox5.Location = new System.Drawing.Point(285, 17);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(237, 62);
+            this.pictureBox5.Size = new System.Drawing.Size(237, 106);
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
-            // Article
+            // Show_article
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 495);
             this.Controls.Add(this.panel_article);
-            this.Name = "Article";
-            this.Text = "Article";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Show_article";
+            this.Text = "Show_article";
             this.panel_article.ResumeLayout(false);
             this.panel_article.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

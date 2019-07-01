@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Headline
 {
@@ -83,7 +85,8 @@ namespace Headline
 
         }
 
-        private string IsSetEmail(string email){
+        private string IsSetEmail(string email)
+        {
 
             string querryMail = "SELECT * FROM Users WHERE email='" + email + "'";
             return querryMail;
@@ -124,7 +127,7 @@ namespace Headline
 
         }
 
-        public bool CheckLogin(string username,string password)
+        public bool CheckLogin(string username, string password)
         {
             string sql = "SELECT * FROM Users WHERE Username='" + username + "' AND Password='" + password + "'";
             SqlDataReader reader = DB.Instance.GetDataReader(sql);
@@ -144,9 +147,9 @@ namespace Headline
 
         public string GetFavoriteCountry(string username)
         {
+            string country;
             string sqlpref = "SELECT favoriteCountry FROM Users WHERE Username='" + username + "'";
             SqlDataReader retrievePref = DB.Instance.GetDataReader(sqlpref);
-            string country;
             retrievePref.Read();
             country = retrievePref.GetString(0);
             retrievePref.Close();
@@ -155,9 +158,9 @@ namespace Headline
 
         public string GetFavoriteKeyword(string username)
         {
+            string keyword;
             string sqlpref = "SELECT favoriteKeyword FROM Users WHERE Username='" + username + "'";
             SqlDataReader retrievePref = DB.Instance.GetDataReader(sqlpref);
-            string keyword;
             retrievePref.Read();
             keyword = retrievePref.GetString(0);
             retrievePref.Close();
