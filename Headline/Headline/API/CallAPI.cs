@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -12,11 +8,12 @@ namespace Headline.API
     {
         public string API(string url)
         {
-            var json = new WebClient().DownloadString(url);
+                var json = new WebClient().DownloadString(url);
 
-            return json;
+                return json;
+  
+
         }
-
 
         public List<Research.Article> showTITLE(string json)
         {
@@ -25,6 +22,7 @@ namespace Headline.API
             int y = jPerson.totalResults;
             
             List<Research.Article> articles = new List<Research.Article>();
+
             foreach (var num in jPerson.articles)
              {
                 Research.Article article = new Research.Article();
@@ -36,6 +34,7 @@ namespace Headline.API
                 article.date = num.publishedAt;
                 article.content = num.content;
                 article.author = num.author;
+                article.nbarticles = y;
                 articles.Add(article);
              }
 

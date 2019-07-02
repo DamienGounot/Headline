@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
-using System.Net;
-using Newtonsoft.Json;
-using System.Diagnostics;
 
 namespace Headline
 {
@@ -53,16 +41,26 @@ namespace Headline
             FormHome Home = new FormHome(count, keyword, country, sources);
             Home.MdiParent = this.MdiParent;
             Home.Show();
+            Home.WindowState = FormWindowState.Maximized;
             this.Hide();
         }
 
         private void btn_save_pref_Click(object sender, EventArgs e)
         {
-            UI.NavigationBar.Instance.Connexion();
             DataBase.DB.Instance.UpdateUserPref(FormLogin.username, textBox_keyword_pref.Text,textBox_country_pref.Text);
-            MessageBox.Show("Update Preferences succes");
-            goHome(5, FormPreferences.Instance.textBox_keyword_pref.Text, FormPreferences.Instance.textBox_country_pref.Text, "");
+            label_save.Visible = true;
 
+
+        }
+
+        private void textBox_country_pref_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label_save.Visible = false;
+        }
+
+        private void textBox_keyword_pref_TextChanged(object sender, EventArgs e)
+        {
+            label_save.Visible = false;
         }
     }
 }

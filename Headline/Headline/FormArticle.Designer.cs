@@ -46,6 +46,7 @@
             // 
             // panel_article
             // 
+            this.panel_article.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel_article.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel_article.Controls.Add(this.linkLabel4);
             this.panel_article.Controls.Add(this.pictureBox6);
@@ -56,7 +57,6 @@
             this.panel_article.Controls.Add(this.article_description);
             this.panel_article.Controls.Add(this.article_title);
             this.panel_article.Controls.Add(this.pictureBox5);
-            this.panel_article.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_article.Location = new System.Drawing.Point(0, 0);
             this.panel_article.Name = "panel_article";
             this.panel_article.Size = new System.Drawing.Size(1264, 681);
@@ -64,8 +64,7 @@
             // 
             // linkLabel4
             // 
-            this.linkLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel4.Location = new System.Drawing.Point(150, 147);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(956, 23);
@@ -73,11 +72,13 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "ah";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.ErrorImage")));
+            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
             this.pictureBox6.Location = new System.Drawing.Point(129, 187);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(1008, 103);
@@ -87,9 +88,7 @@
             // 
             // article_content
             // 
-            this.article_content.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_content.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.article_content.Location = new System.Drawing.Point(45, 451);
             this.article_content.Name = "article_content";
             this.article_content.Size = new System.Drawing.Size(1171, 166);
@@ -98,8 +97,7 @@
             // 
             // article_date
             // 
-            this.article_date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.article_date.AutoSize = true;
             this.article_date.Location = new System.Drawing.Point(722, 384);
             this.article_date.Name = "article_date";
@@ -109,8 +107,7 @@
             // 
             // article_source
             // 
-            this.article_source.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_source.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.article_source.AutoSize = true;
             this.article_source.Location = new System.Drawing.Point(588, 384);
             this.article_source.Name = "article_source";
@@ -120,8 +117,7 @@
             // 
             // article_author
             // 
-            this.article_author.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_author.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.article_author.AutoSize = true;
             this.article_author.Location = new System.Drawing.Point(493, 384);
             this.article_author.Name = "article_author";
@@ -131,8 +127,7 @@
             // 
             // article_description
             // 
-            this.article_description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.article_description.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.article_description.Location = new System.Drawing.Point(64, 304);
             this.article_description.Name = "article_description";
             this.article_description.Size = new System.Drawing.Size(1136, 23);
@@ -142,6 +137,7 @@
             // 
             // article_title
             // 
+            this.article_title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.article_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.article_title.Location = new System.Drawing.Point(238, 119);
             this.article_title.Name = "article_title";
@@ -152,8 +148,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
             this.pictureBox5.Location = new System.Drawing.Point(496, 12);
