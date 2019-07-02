@@ -2,7 +2,6 @@ C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Headline.exe.config
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Headline.exe
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\bin\Debug\Headline.pdb
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csprojAssemblyReference.cache
-C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Form1.resources
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Properties.Resources.resources
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.GenerateResource.cache
 C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.CoreCompileInputs.cache
@@ -39,7 +38,6 @@ C:\Users\vince\Desktop\r190E6\Headline\Headline\bin\Debug\MySql.Data.xml
 C:\Users\vince\Desktop\r190E6\Headline\Headline\bin\Debug\NewsAPI.xml
 C:\Users\vince\Desktop\r190E6\Headline\Headline\bin\Debug\Newtonsoft.Json.xml
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csprojAssemblyReference.cache
-C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Form1.resources
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.Properties.Resources.resources
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.GenerateResource.cache
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.csproj.CoreCompileInputs.cache
@@ -139,3 +137,17 @@ F:\Downloads\Headline\Headline\obj\Debug\Headline.csproj.CoreCompileInputs.cache
 F:\Downloads\Headline\Headline\obj\Debug\Headline.csproj.CopyComplete
 F:\Downloads\Headline\Headline\obj\Debug\Headline.exe
 F:\Downloads\Headline\Headline\obj\Debug\Headline.pdb
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormHome.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormLogin.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormPreferences.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormRegistration.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormSearch.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormArticle.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormContainer.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormContainer.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormHome.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormLogin.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormPreferences.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormRegistration.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormSearch.resources
+C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormArticle.resources
