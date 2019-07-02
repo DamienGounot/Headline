@@ -61,7 +61,7 @@ namespace Headline
 
             if (textBox_username.Text == "" || textBox_password.Text == "")
             {
-                MessageBox.Show("Error : username and password are required");
+                Check(label_error, "Error : username and password are required");
             }
             else
             {
@@ -70,17 +70,15 @@ namespace Headline
 
                 if (DataBase.DB.Instance.CheckLogin(textBox_username.Text, textBox_password.Text)) // si le login est OK
                 {
-                    MessageBox.Show("login succes");
                     username = textBox_username.Text;
                     favoriteCountry = DataBase.DB.Instance.GetFavoriteCountry(username);
                     favoriteKeyword = DataBase.DB.Instance.GetFavoriteKeyword(username);
-
                     LoginResearch(favoriteCountry, favoriteKeyword);
                     UI.NavigationBar.Instance.Connexion();
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect Username or Password !");
+                    Check(label_error, "Error : Incorrect Username or Password");
                     reset();
                 }
 
@@ -111,6 +109,14 @@ namespace Headline
         {
             textBox_username.Text = "";
             textBox_password.Text = "";
+        }
+
+
+        private void Check(System.Windows.Forms.Label label,string message)
+        {
+            label.Text = message;
+            label.ForeColor = System.Drawing.Color.Red;
+            label.Visible = true;
         }
 
  

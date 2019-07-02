@@ -53,47 +53,66 @@ namespace Headline
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            bool error = false;
+            bool error,errorName,errorMail,errorPass=true;
+
             if (isNotCompleted())
             {
-                MessageBox.Show("Error : every fields are required");
+                Error(username,label_correct, "Every Fields are required", true);
                 error = true;
             }
-
-            if (password.Text != confirm.Text)
+            else
             {
-                MessageBox.Show("Error : password not match");
-                error = true;
-                password.Text = "";
-                confirm.Text = "";
+                label_correct.Visible = false;
+                error =  false;
             }
 
-            if (!error)
+            if (password.Text != confirm.Text && password.Text != "")
+            {
+                Error(password, label_error_pass, "Error : Not matching", true);
+                Error(confirm, label_error_pass2, "Error : Not matching", true);
+                errorPass = true;
+
+            }
+            if (password.Text == confirm.Text && password.Text != "")
+            {
+                Error(password, label_error_pass, "Error : Not matching", false);
+                Error(confirm, label_error_pass2, "Error : Not matching", false);
+                errorPass = false;
+            }
+
+            if (!error && !errorPass)
             {
 
                 if (DataBase.DB.Instance.CheckUserNotRegistered(username.Text)) // si user exist
                 {
-                    MessageBox.Show("this username is already used");
-                    error = true;
-                    username.Text = "";
+                    Error(username,label_error_user, "Error : This username is already taken !", true);
+                    errorName = true;
+                }
+                else
+                {
+                    Error(username, label_error_user, "Error : This username is already taken !", false);
+                    errorName = false;
                 }
 
 
 
                 if (DataBase.DB.Instance.CheckEmailNotRegistered(email.Text)) // si mail exist
                 {
-                    MessageBox.Show("this email is already used");
-                    error = true;
-                    email.Text = "";
+                    Error(email,label_error_mail, "Error : This email is already used !", true);
+                    errorMail = true;
+                }
+                else
+                {
+                    Error(email, label_error_mail, "Error : This email is already used !", false);
+                    errorMail = false;
                 }
 
-                if (!error)
+                if (!errorName && !errorMail)
                 {
 
                     DataBase.DB.Instance.InsertNewUser(username.Text, email.Text, password.Text);
-                    MessageBox.Show("Your account has been created succesfully");
-                    ShowForm(FormLogin.Instance);
                     reset();
+                    Succes();
                 }
             }
         }
@@ -104,6 +123,11 @@ namespace Headline
             email.Text = "";
             password.Text = "";
             confirm.Text = "";
+            label_correct.Visible = false;
+            label_error_mail.Visible = false;
+            label_error_pass.Visible = false;
+            label_error_pass2.Visible = false;
+            label_error_user.Visible = false;
         }
 
         private bool isNotCompleted()
@@ -117,6 +141,35 @@ namespace Headline
                 return false;
             }
         }
+
+
+
+
+
+        private void Error(System.Windows.Forms.TextBox textBox,System.Windows.Forms.Label label,string text,bool error)
+        {
+            if (error) {
+                label.Text = text;
+                label.ForeColor = System.Drawing.Color.Red;
+                label.Visible = true;
+            }
+            else
+            {
+                label.ForeColor = System.Drawing.Color.Black;
+                label.Visible = false;
+            }
+
+        }
+
+        private void Succes()
+        {
+            label_correct.ForeColor = System.Drawing.Color.DarkGreen;
+            label_correct.Text = "Correct : Your account has been succesfully created !";
+            label_correct.Visible = true;
+
+        }
+
+
 
     }
 }

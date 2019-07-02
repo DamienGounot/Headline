@@ -36,6 +36,7 @@
             this.picture = new System.Windows.Forms.PictureBox();
             this.label_Password = new System.Windows.Forms.Label();
             this.Label_UserName = new System.Windows.Forms.Label();
+            this.label_error = new System.Windows.Forms.Label();
             this.Login_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // Login_Panel
             // 
             this.Login_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Login_Panel.Controls.Add(this.label_error);
             this.Login_Panel.Controls.Add(this.textBox_username);
             this.Login_Panel.Controls.Add(this.textBox_password);
             this.Login_Panel.Controls.Add(this.button_login);
@@ -108,6 +110,16 @@
             this.Label_UserName.TabIndex = 7;
             this.Label_UserName.Text = "UserName :";
             // 
+            // label_error
+            // 
+            this.label_error.AutoSize = true;
+            this.label_error.Location = new System.Drawing.Point(518, 190);
+            this.label_error.Name = "label_error";
+            this.label_error.Size = new System.Drawing.Size(35, 13);
+            this.label_error.TabIndex = 16;
+            this.label_error.Text = "Error :";
+            this.label_error.Visible = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,5 +150,6 @@
         private System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Label label_Password;
         private System.Windows.Forms.Label Label_UserName;
+        private System.Windows.Forms.Label label_error;
     }
 }

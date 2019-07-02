@@ -40,6 +40,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_error_user = new System.Windows.Forms.Label();
+            this.label_error_pass2 = new System.Windows.Forms.Label();
+            this.label_error_pass = new System.Windows.Forms.Label();
+            this.label_error_mail = new System.Windows.Forms.Label();
+            this.label_correct = new System.Windows.Forms.Label();
             this.Registration_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +52,11 @@
             // Registration_Panel
             // 
             this.Registration_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Registration_Panel.Controls.Add(this.label_correct);
+            this.Registration_Panel.Controls.Add(this.label_error_mail);
+            this.Registration_Panel.Controls.Add(this.label_error_pass);
+            this.Registration_Panel.Controls.Add(this.label_error_pass2);
+            this.Registration_Panel.Controls.Add(this.label_error_user);
             this.Registration_Panel.Controls.Add(this.confirm);
             this.Registration_Panel.Controls.Add(this.password);
             this.Registration_Panel.Controls.Add(this.email);
@@ -149,6 +159,57 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label_error_user
+            // 
+            this.label_error_user.AutoSize = true;
+            this.label_error_user.Location = new System.Drawing.Point(692, 209);
+            this.label_error_user.Name = "label_error_user";
+            this.label_error_user.Size = new System.Drawing.Size(35, 13);
+            this.label_error_user.TabIndex = 32;
+            this.label_error_user.Text = "Error :";
+            this.label_error_user.Visible = false;
+            // 
+            // label_error_pass2
+            // 
+            this.label_error_pass2.AutoSize = true;
+            this.label_error_pass2.Location = new System.Drawing.Point(692, 340);
+            this.label_error_pass2.Name = "label_error_pass2";
+            this.label_error_pass2.Size = new System.Drawing.Size(35, 13);
+            this.label_error_pass2.TabIndex = 33;
+            this.label_error_pass2.Text = "Error :";
+            this.label_error_pass2.Visible = false;
+            // 
+            // label_error_pass
+            // 
+            this.label_error_pass.AutoSize = true;
+            this.label_error_pass.Location = new System.Drawing.Point(692, 297);
+            this.label_error_pass.Name = "label_error_pass";
+            this.label_error_pass.Size = new System.Drawing.Size(35, 13);
+            this.label_error_pass.TabIndex = 34;
+            this.label_error_pass.Text = "Error :";
+            this.label_error_pass.Visible = false;
+            // 
+            // label_error_mail
+            // 
+            this.label_error_mail.AutoSize = true;
+            this.label_error_mail.Location = new System.Drawing.Point(692, 248);
+            this.label_error_mail.Name = "label_error_mail";
+            this.label_error_mail.Size = new System.Drawing.Size(35, 13);
+            this.label_error_mail.TabIndex = 35;
+            this.label_error_mail.Text = "Error :";
+            this.label_error_mail.Visible = false;
+            // 
+            // label_correct
+            // 
+            this.label_correct.AutoSize = true;
+            this.label_correct.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label_correct.Location = new System.Drawing.Point(499, 145);
+            this.label_correct.Name = "label_correct";
+            this.label_correct.Size = new System.Drawing.Size(261, 13);
+            this.label_correct.TabIndex = 36;
+            this.label_correct.Text = "Correct : Your account has been succesfully created !";
+            this.label_correct.Visible = false;
+            // 
             // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,5 +242,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_error_mail;
+        private System.Windows.Forms.Label label_error_pass;
+        private System.Windows.Forms.Label label_error_pass2;
+        private System.Windows.Forms.Label label_error_user;
+        private System.Windows.Forms.Label label_correct;
     }
 }

@@ -24,14 +24,19 @@ namespace Headline
         {
             InitializeComponent();
 
+
             if (count > 0)
             {
                 if (count!=5)
                 {
+                    Cursor.Current = Cursors.WaitCursor;
                     API.AllAPI.Instance.search(keyword, country, sources);
+                    Cursor.Current = Cursors.Default;
                 }
-               
+
+                Cursor.Current = Cursors.WaitCursor;
                 List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
+                Cursor.Current = Cursors.Default;
 
                 if (articles.Count >= 1)
                 {
@@ -50,7 +55,7 @@ namespace Headline
                     titlehome3.Text = articles[which_article+2].title;
                     pictureBoxArticle3.ImageLocation = articles[which_article+2].image;
                 }
-                         
+
 
             }
         }
@@ -89,7 +94,9 @@ namespace Headline
             {
                 which_article = which_article + 3;
             }
+            Cursor.Current = Cursors.WaitCursor;
             List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
+            Cursor.Current = Cursors.Default;
 
             if (articles.Count >= 1)
             {
@@ -116,8 +123,10 @@ namespace Headline
             {
                 which_article = which_article - 3;
             }
+            Cursor.Current = Cursors.WaitCursor;
             List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-            
+            Cursor.Current = Cursors.Default;
+
             if (articles.Count >= 1)
             {
                 titlehome1.Text = articles[which_article + 0].title;
