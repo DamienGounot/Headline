@@ -1,17 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
-using System.Net;
-using Newtonsoft.Json;
-using System.Diagnostics;
 
 namespace Headline
 {
@@ -29,7 +18,7 @@ namespace Headline
             {
                 if (count!=5)
                 {
-                    Cursor.Current = Cursors.WaitCursor;
+                    Cursor.Current = Cursors.WaitCursor;                  
                     API.AllAPI.Instance.search(keyword, country, sources);
                     Cursor.Current = Cursors.Default;
                 }
@@ -67,6 +56,7 @@ namespace Headline
             FormArticle articlepage = new FormArticle(which_article);
             articlepage.MdiParent = this.MdiParent;
             articlepage.Show();
+            articlepage.WindowState = FormWindowState.Maximized;
             this.Hide();
         }
 
@@ -76,6 +66,7 @@ namespace Headline
             FormArticle articlepage = new FormArticle(which_article+1);
             articlepage.MdiParent = this.MdiParent;
             articlepage.Show();
+            articlepage.WindowState = FormWindowState.Maximized;
             this.Hide();
         }
 
@@ -85,18 +76,40 @@ namespace Headline
             FormArticle articlepage = new FormArticle(which_article+2);
             articlepage.MdiParent = this.MdiParent;
             articlepage.Show();
+            articlepage.WindowState = FormWindowState.Maximized;
             this.Hide();
         }
 
         private void button_next_Click(object sender, EventArgs e)
         {
-            if (which_article < 15)
-            {
-                which_article = which_article + 3;
-            }
-            Cursor.Current = Cursors.WaitCursor;
+
             List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-            Cursor.Current = Cursors.Default;
+            int nbarticles;
+            if (articles.Count > 0)
+            {
+                nbarticles = articles[0].nbarticles;
+            }
+            else
+            {
+                nbarticles = 0;
+            }
+               
+                
+
+            if (nbarticles <= 20)
+            {
+                if (which_article < nbarticles-4)
+                {
+                    which_article = which_article + 3;
+                }
+
+            }
+            else
+            {
+                if(which_article<15)
+                    which_article = which_article + 3;
+            }
+
 
             if (articles.Count >= 1)
             {
@@ -123,9 +136,8 @@ namespace Headline
             {
                 which_article = which_article - 3;
             }
-            Cursor.Current = Cursors.WaitCursor;
+
             List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-            Cursor.Current = Cursors.Default;
 
             if (articles.Count >= 1)
             {

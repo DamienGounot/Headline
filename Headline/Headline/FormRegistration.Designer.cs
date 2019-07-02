@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistration));
             this.Registration_Panel = new System.Windows.Forms.Panel();
+            this.label_correct = new System.Windows.Forms.Label();
+            this.label_error_mail = new System.Windows.Forms.Label();
+            this.label_error_pass = new System.Windows.Forms.Label();
+            this.label_error_pass2 = new System.Windows.Forms.Label();
+            this.label_error_user = new System.Windows.Forms.Label();
             this.confirm = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
@@ -40,17 +45,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label_error_user = new System.Windows.Forms.Label();
-            this.label_error_pass2 = new System.Windows.Forms.Label();
-            this.label_error_pass = new System.Windows.Forms.Label();
-            this.label_error_mail = new System.Windows.Forms.Label();
-            this.label_correct = new System.Windows.Forms.Label();
             this.Registration_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Registration_Panel
             // 
+            this.Registration_Panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Registration_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Registration_Panel.Controls.Add(this.label_correct);
             this.Registration_Panel.Controls.Add(this.label_error_mail);
@@ -67,15 +68,71 @@
             this.Registration_Panel.Controls.Add(this.label7);
             this.Registration_Panel.Controls.Add(this.label8);
             this.Registration_Panel.Controls.Add(this.pictureBox1);
-            this.Registration_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Registration_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Registration_Panel.Location = new System.Drawing.Point(-1, -7);
             this.Registration_Panel.Name = "Registration_Panel";
-            this.Registration_Panel.Size = new System.Drawing.Size(1264, 681);
+            this.Registration_Panel.Size = new System.Drawing.Size(1277, 785);
             this.Registration_Panel.TabIndex = 19;
+            // 
+            // label_correct
+            // 
+            this.label_correct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_correct.AutoSize = true;
+            this.label_correct.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label_correct.Location = new System.Drawing.Point(505, 197);
+            this.label_correct.Name = "label_correct";
+            this.label_correct.Size = new System.Drawing.Size(261, 13);
+            this.label_correct.TabIndex = 36;
+            this.label_correct.Text = "Correct : Your account has been succesfully created !";
+            this.label_correct.Visible = false;
+            // 
+            // label_error_mail
+            // 
+            this.label_error_mail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_error_mail.AutoSize = true;
+            this.label_error_mail.Location = new System.Drawing.Point(698, 300);
+            this.label_error_mail.Name = "label_error_mail";
+            this.label_error_mail.Size = new System.Drawing.Size(35, 13);
+            this.label_error_mail.TabIndex = 35;
+            this.label_error_mail.Text = "Error :";
+            this.label_error_mail.Visible = false;
+            // 
+            // label_error_pass
+            // 
+            this.label_error_pass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_error_pass.AutoSize = true;
+            this.label_error_pass.Location = new System.Drawing.Point(698, 349);
+            this.label_error_pass.Name = "label_error_pass";
+            this.label_error_pass.Size = new System.Drawing.Size(35, 13);
+            this.label_error_pass.TabIndex = 34;
+            this.label_error_pass.Text = "Error :";
+            this.label_error_pass.Visible = false;
+            // 
+            // label_error_pass2
+            // 
+            this.label_error_pass2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_error_pass2.AutoSize = true;
+            this.label_error_pass2.Location = new System.Drawing.Point(698, 392);
+            this.label_error_pass2.Name = "label_error_pass2";
+            this.label_error_pass2.Size = new System.Drawing.Size(35, 13);
+            this.label_error_pass2.TabIndex = 33;
+            this.label_error_pass2.Text = "Error :";
+            this.label_error_pass2.Visible = false;
+            // 
+            // label_error_user
+            // 
+            this.label_error_user.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_error_user.AutoSize = true;
+            this.label_error_user.Location = new System.Drawing.Point(698, 261);
+            this.label_error_user.Name = "label_error_user";
+            this.label_error_user.Size = new System.Drawing.Size(35, 13);
+            this.label_error_user.TabIndex = 32;
+            this.label_error_user.Text = "Error :";
+            this.label_error_user.Visible = false;
             // 
             // confirm
             // 
-            this.confirm.Location = new System.Drawing.Point(575, 337);
+            this.confirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirm.Location = new System.Drawing.Point(581, 389);
             this.confirm.Name = "confirm";
             this.confirm.PasswordChar = '*';
             this.confirm.Size = new System.Drawing.Size(100, 20);
@@ -83,7 +140,8 @@
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(575, 294);
+            this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.password.Location = new System.Drawing.Point(581, 346);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(100, 20);
@@ -91,21 +149,24 @@
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(575, 245);
+            this.email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.email.Location = new System.Drawing.Point(581, 297);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(100, 20);
             this.email.TabIndex = 29;
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(575, 206);
+            this.username.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.username.Location = new System.Drawing.Point(581, 258);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(100, 20);
             this.username.TabIndex = 28;
             // 
             // buttonRegister
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(553, 392);
+            this.buttonRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegister.Location = new System.Drawing.Point(559, 444);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(75, 23);
             this.buttonRegister.TabIndex = 27;
@@ -115,8 +176,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 340);
+            this.label5.Location = new System.Drawing.Point(467, 392);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 13);
             this.label5.TabIndex = 25;
@@ -124,8 +186,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(499, 297);
+            this.label6.Location = new System.Drawing.Point(505, 349);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 24;
@@ -133,8 +196,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(518, 248);
+            this.label7.Location = new System.Drawing.Point(524, 300);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 23;
@@ -142,8 +206,9 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(497, 209);
+            this.label8.Location = new System.Drawing.Point(503, 261);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 22;
@@ -151,70 +216,20 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(488, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(494, 107);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(237, 62);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // label_error_user
-            // 
-            this.label_error_user.AutoSize = true;
-            this.label_error_user.Location = new System.Drawing.Point(692, 209);
-            this.label_error_user.Name = "label_error_user";
-            this.label_error_user.Size = new System.Drawing.Size(35, 13);
-            this.label_error_user.TabIndex = 32;
-            this.label_error_user.Text = "Error :";
-            this.label_error_user.Visible = false;
-            // 
-            // label_error_pass2
-            // 
-            this.label_error_pass2.AutoSize = true;
-            this.label_error_pass2.Location = new System.Drawing.Point(692, 340);
-            this.label_error_pass2.Name = "label_error_pass2";
-            this.label_error_pass2.Size = new System.Drawing.Size(35, 13);
-            this.label_error_pass2.TabIndex = 33;
-            this.label_error_pass2.Text = "Error :";
-            this.label_error_pass2.Visible = false;
-            // 
-            // label_error_pass
-            // 
-            this.label_error_pass.AutoSize = true;
-            this.label_error_pass.Location = new System.Drawing.Point(692, 297);
-            this.label_error_pass.Name = "label_error_pass";
-            this.label_error_pass.Size = new System.Drawing.Size(35, 13);
-            this.label_error_pass.TabIndex = 34;
-            this.label_error_pass.Text = "Error :";
-            this.label_error_pass.Visible = false;
-            // 
-            // label_error_mail
-            // 
-            this.label_error_mail.AutoSize = true;
-            this.label_error_mail.Location = new System.Drawing.Point(692, 248);
-            this.label_error_mail.Name = "label_error_mail";
-            this.label_error_mail.Size = new System.Drawing.Size(35, 13);
-            this.label_error_mail.TabIndex = 35;
-            this.label_error_mail.Text = "Error :";
-            this.label_error_mail.Visible = false;
-            // 
-            // label_correct
-            // 
-            this.label_correct.AutoSize = true;
-            this.label_correct.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label_correct.Location = new System.Drawing.Point(499, 145);
-            this.label_correct.Name = "label_correct";
-            this.label_correct.Size = new System.Drawing.Size(261, 13);
-            this.label_correct.TabIndex = 36;
-            this.label_correct.Text = "Correct : Your account has been succesfully created !";
-            this.label_correct.Visible = false;
-            // 
             // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1276, 774);
             this.ControlBox = false;
             this.Controls.Add(this.Registration_Panel);
             this.Name = "FormRegistration";

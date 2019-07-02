@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearch));
             this.search_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_error = new System.Windows.Forms.Label();
             this.textBox_country_search = new System.Windows.Forms.ComboBox();
             this.textBox_source_search = new System.Windows.Forms.ComboBox();
             this.button_make_search = new System.Windows.Forms.Button();
@@ -46,8 +47,8 @@
             // 
             // search_panel
             // 
+            this.search_panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.search_panel.Controls.Add(this.panel1);
-            this.search_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.search_panel.Location = new System.Drawing.Point(0, 0);
             this.search_panel.Name = "search_panel";
             this.search_panel.Size = new System.Drawing.Size(1264, 681);
@@ -55,7 +56,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label_error);
             this.panel1.Controls.Add(this.textBox_country_search);
             this.panel1.Controls.Add(this.textBox_source_search);
             this.panel1.Controls.Add(this.button_make_search);
@@ -64,14 +67,26 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 681);
             this.panel1.TabIndex = 30;
             // 
+            // label_error
+            // 
+            this.label_error.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_error.AutoSize = true;
+            this.label_error.ForeColor = System.Drawing.Color.Red;
+            this.label_error.Location = new System.Drawing.Point(575, 130);
+            this.label_error.Name = "label_error";
+            this.label_error.Size = new System.Drawing.Size(119, 13);
+            this.label_error.TabIndex = 34;
+            this.label_error.Text = "Error : No parameter set";
+            this.label_error.Visible = false;
+            // 
             // textBox_country_search
             // 
+            this.textBox_country_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_country_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox_country_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.textBox_country_search.FormattingEnabled = true;
@@ -137,6 +152,7 @@
             // 
             // textBox_source_search
             // 
+            this.textBox_source_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_source_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox_source_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.textBox_source_search.FormattingEnabled = true;
@@ -192,6 +208,7 @@
             // 
             // button_make_search
             // 
+            this.button_make_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_make_search.Location = new System.Drawing.Point(588, 288);
             this.button_make_search.Name = "button_make_search";
             this.button_make_search.Size = new System.Drawing.Size(75, 23);
@@ -202,6 +219,7 @@
             // 
             // textBox_keyword_search
             // 
+            this.textBox_keyword_search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_keyword_search.Location = new System.Drawing.Point(590, 172);
             this.textBox_keyword_search.Name = "textBox_keyword_search";
             this.textBox_keyword_search.Size = new System.Drawing.Size(119, 20);
@@ -209,6 +227,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(497, 245);
             this.label15.Name = "label15";
@@ -218,6 +237,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(495, 206);
             this.label14.Name = "label14";
@@ -227,6 +247,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(493, 172);
             this.label12.Name = "label12";
@@ -236,6 +257,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.InitialImage = null;
             this.pictureBox4.Location = new System.Drawing.Point(510, 30);
@@ -277,5 +299,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label_error;
     }
 }

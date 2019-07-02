@@ -33,5 +33,10 @@ namespace Headline.API
             return lastResearchedarticles;
         }
 
+        public int GetLength()
+        {
+            return lastResearchedarticles.Count;
+        }
+
     }
 }

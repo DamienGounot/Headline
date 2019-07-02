@@ -52,8 +52,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(320, 97);
+            this.label1.Location = new System.Drawing.Point(320, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
@@ -61,6 +62,7 @@
             // 
             // Home_Panel
             // 
+            this.Home_Panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Home_Panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Home_Panel.Controls.Add(this.button_previous);
             this.Home_Panel.Controls.Add(this.button_next);
@@ -74,14 +76,14 @@
             this.Home_Panel.Controls.Add(this.pictureBoxArticle2);
             this.Home_Panel.Controls.Add(this.pictureBoxArticle1);
             this.Home_Panel.Controls.Add(this.pictureBox2);
-            this.Home_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Home_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Home_Panel.Location = new System.Drawing.Point(0, -20);
             this.Home_Panel.Name = "Home_Panel";
             this.Home_Panel.Size = new System.Drawing.Size(1264, 681);
             this.Home_Panel.TabIndex = 35;
             // 
             // button_previous
             // 
+            this.button_previous.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_previous.Location = new System.Drawing.Point(464, 474);
             this.button_previous.Name = "button_previous";
             this.button_previous.Size = new System.Drawing.Size(75, 23);
@@ -92,6 +94,7 @@
             // 
             // button_next
             // 
+            this.button_next.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_next.Location = new System.Drawing.Point(582, 474);
             this.button_next.Name = "button_next";
             this.button_next.Size = new System.Drawing.Size(75, 23);
@@ -102,6 +105,7 @@
             // 
             // titlehome3
             // 
+            this.titlehome3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titlehome3.Location = new System.Drawing.Point(903, 112);
             this.titlehome3.Multiline = true;
             this.titlehome3.Name = "titlehome3";
@@ -110,6 +114,7 @@
             // 
             // titlehome2
             // 
+            this.titlehome2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titlehome2.Location = new System.Drawing.Point(483, 112);
             this.titlehome2.Multiline = true;
             this.titlehome2.Name = "titlehome2";
@@ -118,6 +123,7 @@
             // 
             // titlehome1
             // 
+            this.titlehome1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titlehome1.Location = new System.Drawing.Point(109, 112);
             this.titlehome1.Multiline = true;
             this.titlehome1.Name = "titlehome1";
@@ -126,6 +132,7 @@
             // 
             // linkLabel3
             // 
+            this.linkLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Location = new System.Drawing.Point(977, 352);
             this.linkLabel3.Name = "linkLabel3";
@@ -137,6 +144,7 @@
             // 
             // linkLabel2
             // 
+            this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(540, 352);
             this.linkLabel2.Name = "linkLabel2";
@@ -148,6 +156,7 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(138, 352);
             this.linkLabel1.Name = "linkLabel1";
@@ -159,6 +168,9 @@
             // 
             // pictureBoxArticle3
             // 
+            this.pictureBoxArticle3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxArticle3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle3.ErrorImage")));
+            this.pictureBoxArticle3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle3.InitialImage")));
             this.pictureBoxArticle3.Location = new System.Drawing.Point(885, 181);
             this.pictureBoxArticle3.Name = "pictureBoxArticle3";
             this.pictureBoxArticle3.Size = new System.Drawing.Size(246, 146);
@@ -168,6 +180,9 @@
             // 
             // pictureBoxArticle2
             // 
+            this.pictureBoxArticle2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxArticle2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle2.ErrorImage")));
+            this.pictureBoxArticle2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle2.InitialImage")));
             this.pictureBoxArticle2.Location = new System.Drawing.Point(458, 181);
             this.pictureBoxArticle2.Name = "pictureBoxArticle2";
             this.pictureBoxArticle2.Size = new System.Drawing.Size(240, 146);
@@ -177,6 +192,9 @@
             // 
             // pictureBoxArticle1
             // 
+            this.pictureBoxArticle1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxArticle1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle1.ErrorImage")));
+            this.pictureBoxArticle1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle1.InitialImage")));
             this.pictureBoxArticle1.Location = new System.Drawing.Point(81, 181);
             this.pictureBoxArticle1.Name = "pictureBoxArticle1";
             this.pictureBoxArticle1.Size = new System.Drawing.Size(222, 146);
@@ -186,6 +204,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
             this.pictureBox2.Location = new System.Drawing.Point(476, 12);
@@ -199,13 +218,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 640);
             this.ControlBox = false;
             this.Controls.Add(this.Home_Panel);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormHome";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Home_form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Home_Panel.ResumeLayout(false);

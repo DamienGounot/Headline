@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreferences));
             this.preferences_panel = new System.Windows.Forms.Panel();
+            this.label_save = new System.Windows.Forms.Label();
             this.textBox_country_pref = new System.Windows.Forms.ComboBox();
             this.btn_save_pref = new System.Windows.Forms.Button();
             this.textBox_keyword_pref = new System.Windows.Forms.TextBox();
@@ -42,21 +43,35 @@
             // 
             // preferences_panel
             // 
+            this.preferences_panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.preferences_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.preferences_panel.Controls.Add(this.label_save);
             this.preferences_panel.Controls.Add(this.textBox_country_pref);
             this.preferences_panel.Controls.Add(this.btn_save_pref);
             this.preferences_panel.Controls.Add(this.textBox_keyword_pref);
             this.preferences_panel.Controls.Add(this.label9);
             this.preferences_panel.Controls.Add(this.label4);
             this.preferences_panel.Controls.Add(this.pictureBox3);
-            this.preferences_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preferences_panel.Location = new System.Drawing.Point(0, 0);
             this.preferences_panel.Name = "preferences_panel";
             this.preferences_panel.Size = new System.Drawing.Size(1264, 681);
             this.preferences_panel.TabIndex = 32;
             // 
+            // label_save
+            // 
+            this.label_save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_save.AutoSize = true;
+            this.label_save.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label_save.Location = new System.Drawing.Point(528, 160);
+            this.label_save.Name = "label_save";
+            this.label_save.Size = new System.Drawing.Size(137, 13);
+            this.label_save.TabIndex = 28;
+            this.label_save.Text = "Save Preferences Succes !";
+            this.label_save.Visible = false;
+            // 
             // textBox_country_pref
             // 
+            this.textBox_country_pref.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_country_pref.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox_country_pref.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.textBox_country_pref.FormattingEnabled = true;
@@ -119,9 +134,11 @@
             this.textBox_country_pref.Name = "textBox_country_pref";
             this.textBox_country_pref.Size = new System.Drawing.Size(121, 21);
             this.textBox_country_pref.TabIndex = 27;
+            this.textBox_country_pref.SelectedIndexChanged += new System.EventHandler(this.textBox_country_pref_SelectedIndexChanged);
             // 
             // btn_save_pref
             // 
+            this.btn_save_pref.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_save_pref.Location = new System.Drawing.Point(544, 332);
             this.btn_save_pref.Name = "btn_save_pref";
             this.btn_save_pref.Size = new System.Drawing.Size(75, 23);
@@ -132,13 +149,16 @@
             // 
             // textBox_keyword_pref
             // 
+            this.textBox_keyword_pref.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox_keyword_pref.Location = new System.Drawing.Point(546, 233);
             this.textBox_keyword_pref.Name = "textBox_keyword_pref";
             this.textBox_keyword_pref.Size = new System.Drawing.Size(119, 20);
             this.textBox_keyword_pref.TabIndex = 17;
+            this.textBox_keyword_pref.TextChanged += new System.EventHandler(this.textBox_keyword_pref_TextChanged);
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(489, 271);
             this.label9.Name = "label9";
@@ -148,6 +168,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(486, 236);
             this.label4.Name = "label4";
@@ -157,6 +178,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(467, 26);
@@ -193,5 +215,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label_save;
     }
 }

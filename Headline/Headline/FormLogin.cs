@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
-using System.Net;
-using Newtonsoft.Json;
-using System.Diagnostics;
 
 namespace Headline
 {
@@ -94,6 +82,7 @@ namespace Headline
                 FormHome mainform = new FormHome(1, "", "us", "");
                 mainform.MdiParent = this.MdiParent;
                 mainform.Show();
+                mainform.WindowState = FormWindowState.Maximized;
                 this.Hide();
             }
             else
@@ -101,6 +90,7 @@ namespace Headline
                 FormHome mainform = new FormHome(1, favoriteKeyword, favoriteCountry, "");
                 mainform.MdiParent = this.MdiParent;
                 mainform.Show();
+                mainform.WindowState = FormWindowState.Maximized;
                 this.Hide();
             }
         }

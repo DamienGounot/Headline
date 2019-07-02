@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Headline
@@ -57,6 +50,7 @@ namespace Headline
             Login.MdiParent = this;
             Login.Show();
             InitNavbar();
+            Login.WindowState = FormWindowState.Maximized;
         }
 
         private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +64,7 @@ namespace Headline
             registration.MdiParent = this;
             registration.Show();
             InitNavbar();
+            registration.WindowState = FormWindowState.Maximized;
             
 
         }
@@ -88,9 +83,9 @@ namespace Headline
         {
             this.ActiveMdiChild.Visible = false;
             UI.NavigationBar.Instance.Deconnexion();
-            FormLogin login = new FormLogin();
-            login.MdiParent = this;
-            login.Show();
+           // FormLogin login = new FormLogin();
+           // login.MdiParent = this;
+           // login.Show();
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,6 +95,7 @@ namespace Headline
             FormSearch search = new FormSearch();
             search.MdiParent = this;
             search.Show();
+            search.WindowState = FormWindowState.Maximized;
         }
 
         private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +105,7 @@ namespace Headline
             FormPreferences preferences = new FormPreferences();
             preferences.MdiParent = this;
             preferences.Show();
+            preferences.WindowState = FormWindowState.Maximized;
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,6 +115,7 @@ namespace Headline
             FormHome home = new FormHome(5, "keyword", "country", "sources");
             home.MdiParent = this;
             home.Show();
+            home.WindowState = FormWindowState.Maximized;
         }
     }
 }

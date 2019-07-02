@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Headline
@@ -31,15 +24,24 @@ namespace Headline
 
         public void button_make_search_Click(object sender, EventArgs e)
         {
-            UI.NavigationBar.Instance.Connexion();
             keyword = textBox_keyword_search.Text;
             country = textBox_country_search.Text;
             source= textBox_source_search.Text;
-            int b = 1;
-            FormHome mainform = new FormHome(b,keyword,country,source);
-            mainform.MdiParent = this.MdiParent;
-            mainform.Show();
-            this.Hide();
+
+            if (FormSearch.keyword != "" || FormSearch.country != "" || FormSearch.source != "")
+            {
+                UI.NavigationBar.Instance.Connexion();
+                FormHome mainform = new FormHome(1, keyword, country, source);
+                mainform.MdiParent = this.MdiParent;
+                mainform.Show();
+                mainform.WindowState = FormWindowState.Maximized;
+                this.Hide();
+            }
+            else
+            {
+                label_error.Visible = true;
+            }
+
         }
     }
 }

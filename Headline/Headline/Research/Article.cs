@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Headline.Research
+﻿namespace Headline.Research
 {
     public class Article
     {
@@ -16,6 +10,7 @@ namespace Headline.Research
         public string source;
         public string url;
         public string author;
+        public int nbarticles;
 
     }
 }
