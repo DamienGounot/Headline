@@ -12,7 +12,7 @@ namespace Headline
 {
     public partial class UcArticle : UserControl
     {
-        public Form MdiForm { get; set; }
+        public Form FormContainer;
 
         public UcArticle()
         {
@@ -28,8 +28,8 @@ namespace Headline
                 if (value != article)
                 {
                     article = value;
-                    titlehome1.Text = article.title;
-                    pictureBoxArticle1.ImageLocation = article.image;
+                    titleUc.Text = article.title;
+                    pictureUC.ImageLocation = article.image;
                 }
             }
         }
@@ -40,9 +40,8 @@ namespace Headline
         {
             UI.NavigationBar.Instance.Article();
             FormArticle articlepage = new FormArticle(article);
-            articlepage.MdiParent = MdiForm;
+            articlepage.MdiParent = FormContainer;
             articlepage.Show();
-            articlepage.WindowState = FormWindowState.Maximized;
         }
     }
 }

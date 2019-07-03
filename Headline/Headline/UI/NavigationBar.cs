@@ -51,7 +51,7 @@
             FormContainer.search.Visible = false;
             FormContainer.preferences.Visible = true;
             FormContainer.home.Visible = true;
-            FormContainer.back.Visible = false;
+            FormContainer.back.Visible = true;
 
         }
 
@@ -63,7 +63,7 @@
             FormContainer.search.Visible = true;
             FormContainer.preferences.Visible = false;
             FormContainer.home.Visible = true;
-            FormContainer.back.Visible = false;
+            FormContainer.back.Visible = true;
         }
 
         public void Article()

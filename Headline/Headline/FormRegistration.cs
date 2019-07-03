@@ -11,7 +11,6 @@ namespace Headline
         }
 
         private static FormRegistration _instance;
-
         public static FormRegistration Instance
         {
             get
@@ -19,18 +18,13 @@ namespace Headline
                 if (_instance == null)
                     _instance = new FormRegistration();
                 return _instance;
-
             }
         }
-
 
         private void Registration_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
-
         }
-
-
 
         private void ShowForm(Form frm)
         {
@@ -53,13 +47,11 @@ namespace Headline
                 label_correct.Visible = false;
                 error =  false;
             }
-
             if (password.Text != confirm.Text && password.Text != "")
             {
                 Error(password, label_error_pass, "Error : Not matching", true);
                 Error(confirm, label_error_pass2, "Error : Not matching", true);
                 errorPass = true;
-
             }
             if (password.Text == confirm.Text && password.Text != "")
             {
@@ -67,13 +59,11 @@ namespace Headline
                 Error(confirm, label_error_pass2, "Error : Not matching", false);
                 errorPass = false;
             }
-
             if (!error && !errorPass)
             {
-
                 if (DataBase.DB.Instance.CheckUserNotRegistered(username.Text)) // si user exist
                 {
-                    Error(username,label_error_user, "Error : This username is already taken !", true);
+                    Error(username, label_error_user, "Error : This username is already taken !", true);
                     errorName = true;
                 }
                 else
@@ -81,27 +71,8 @@ namespace Headline
                     Error(username, label_error_user, "Error : This username is already taken !", false);
                     errorName = false;
                 }
-
-
-
-                if (DataBase.DB.Instance.CheckEmailNotRegistered(email.Text)) // si mail exist
-                {
-                    Error(email,label_error_mail, "Error : This email is already used !", true);
-                    errorMail = true;
-                }
-                else
-                {
-                    Error(email, label_error_mail, "Error : This email is already used !", false);
-                    errorMail = false;
-                }
-
-                if (!errorName && !errorMail)
-                {
-
-                    DataBase.DB.Instance.InsertNewUser(username.Text, email.Text, password.Text);
-                    reset();
-                    Succes();
-                }
+                errorMail = IsMailOk();
+                InsertNewUser(errorName,errorMail);
             }
         }
 
@@ -130,10 +101,6 @@ namespace Headline
             }
         }
 
-
-
-
-
         private void Error(System.Windows.Forms.TextBox textBox,System.Windows.Forms.Label label,string text,bool error)
         {
             if (error) {
@@ -146,7 +113,6 @@ namespace Headline
                 label.ForeColor = System.Drawing.Color.Black;
                 label.Visible = false;
             }
-
         }
 
         private void Succes()
@@ -154,9 +120,31 @@ namespace Headline
             label_correct.ForeColor = System.Drawing.Color.DarkGreen;
             label_correct.Text = "Correct : Your account has been succesfully created !";
             label_correct.Visible = true;
-
         }
 
+        private void InsertNewUser(bool errorName,bool errorMail)
+        {
+            if (!errorName && !errorMail)
+            {
+                DataBase.DB.Instance.InsertNewUser(username.Text, email.Text, password.Text);
+                reset();
+                Succes();
+            }
+        }
+
+        private bool IsMailOk()
+        {
+            if (DataBase.DB.Instance.CheckEmailNotRegistered(email.Text)) // si mail exist
+            {
+                Error(email, label_error_mail, "Error : This email is already used !", true);
+                return true;
+            }
+            else
+            {
+                Error(email, label_error_mail, "Error : This email is already used !", false);
+                return false;
+            }
+        }
 
 
     }

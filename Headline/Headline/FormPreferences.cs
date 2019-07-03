@@ -35,10 +35,10 @@ namespace Headline
 
 
 
-        private void goHome(int count, string keyword, string country, string sources)
+        private void goHome( string keyword, string country, string sources)
         {
             UI.NavigationBar.Instance.Connexion();
-            FormHome Home = new FormHome(count, keyword, country, sources);
+            FormHome Home = new FormHome(keyword, country, sources);
             Home.MdiParent = this.MdiParent;
             Home.Show();
             Home.WindowState = FormWindowState.Maximized;

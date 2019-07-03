@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcArticle));
-            this.titlehome1 = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBoxArticle1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).BeginInit();
+            this.titleUc = new System.Windows.Forms.TextBox();
+            this.linkUC = new System.Windows.Forms.LinkLabel();
+            this.pictureUC = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUC)).BeginInit();
             this.SuspendLayout();
             // 
-            // titlehome1
+            // titleUc
             // 
-            this.titlehome1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.titlehome1.Location = new System.Drawing.Point(4, 13);
-            this.titlehome1.Margin = new System.Windows.Forms.Padding(4);
-            this.titlehome1.Multiline = true;
-            this.titlehome1.Name = "titlehome1";
-            this.titlehome1.Size = new System.Drawing.Size(288, 54);
-            this.titlehome1.TabIndex = 26;
+            this.titleUc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titleUc.Enabled = false;
+            this.titleUc.Location = new System.Drawing.Point(3, 11);
+            this.titleUc.Multiline = true;
+            this.titleUc.Name = "titleUc";
+            this.titleUc.Size = new System.Drawing.Size(217, 45);
+            this.titleUc.TabIndex = 26;
             // 
-            // linkLabel1
+            // linkUC
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(202, 244);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(90, 17);
-            this.linkLabel1.TabIndex = 25;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Read more...";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkUC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkUC.AutoSize = true;
+            this.linkUC.Location = new System.Drawing.Point(67, 200);
+            this.linkUC.Name = "linkUC";
+            this.linkUC.Size = new System.Drawing.Size(68, 13);
+            this.linkUC.TabIndex = 25;
+            this.linkUC.TabStop = true;
+            this.linkUC.Text = "Read more...";
+            this.linkUC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // pictureBoxArticle1
+            // pictureUC
             // 
-            this.pictureBoxArticle1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxArticle1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle1.ErrorImage")));
-            this.pictureBoxArticle1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxArticle1.InitialImage")));
-            this.pictureBoxArticle1.Location = new System.Drawing.Point(4, 75);
-            this.pictureBoxArticle1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxArticle1.Name = "pictureBoxArticle1";
-            this.pictureBoxArticle1.Size = new System.Drawing.Size(288, 154);
-            this.pictureBoxArticle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxArticle1.TabIndex = 24;
-            this.pictureBoxArticle1.TabStop = false;
+            this.pictureUC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureUC.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureUC.ErrorImage")));
+            this.pictureUC.Image = ((System.Drawing.Image)(resources.GetObject("pictureUC.Image")));
+            this.pictureUC.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureUC.InitialImage")));
+            this.pictureUC.Location = new System.Drawing.Point(3, 61);
+            this.pictureUC.Name = "pictureUC";
+            this.pictureUC.Size = new System.Drawing.Size(216, 125);
+            this.pictureUC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureUC.TabIndex = 24;
+            this.pictureUC.TabStop = false;
             // 
-            // ucArticle
+            // UcArticle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.titlehome1);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.pictureBoxArticle1);
-            this.Name = "ucArticle";
-            this.Size = new System.Drawing.Size(296, 280);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticle1)).EndInit();
+            this.Controls.Add(this.titleUc);
+            this.Controls.Add(this.linkUC);
+            this.Controls.Add(this.pictureUC);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "UcArticle";
+            this.Size = new System.Drawing.Size(222, 228);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,8 +88,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox titlehome1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBoxArticle1;
+        private System.Windows.Forms.TextBox titleUc;
+        private System.Windows.Forms.LinkLabel linkUC;
+        private System.Windows.Forms.PictureBox pictureUC;
     }
 }

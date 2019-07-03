@@ -14,7 +14,7 @@ namespace Headline
 
         private List<Search.Article> articles;
 
-        public FormHome(int count, string keyword, string country, string sources)
+        public FormHome(string keyword, string country, string sources)
         {
             InitializeComponent();
             this.keyword = keyword;
@@ -22,6 +22,7 @@ namespace Headline
             this.sources = sources;
             GetListOfArticles();
             DisplayResults(GetArticlesToDisplay(false, false));
+
         }
 
         private void GetListOfArticles()
@@ -34,37 +35,30 @@ namespace Headline
 
         private void DisplayResults(List<Search.Article> articles)
         {
-            foreach (Control c in Home_Panel.Controls)
-            {
-                if (c.GetType() == typeof(UcArticle))
-                    Home_Panel.Controls.Remove(c);
-            }
+            RemoveUserController();
 
             for (int i = 0; i < 3; i++)
             {
                 UcArticle uc = new UcArticle();
-                uc.MdiForm = this.MdiParent;
+                uc.FormContainer = FormContainer.Instance;
                 uc.Artickle = articles[i];
-
-                uc.Location = new System.Drawing.Point((i * uc.Width + 10) + 50, 100);
-
+                uc.Location = new System.Drawing.Point((i * uc.Width + 200) + 10, 200);
                 Home_Panel.Controls.Add(uc);
-            }
-            
+            }           
         }
 
         private List<Search.Article> GetArticlesToDisplay(bool previous = false, bool next = false)
         {
-            if (previous) which_article -= 3; Math.Max(which_article, 0);
-            if (next) which_article += 3; Math.Min(which_article, articles.Count - 3);
+            if (previous){which_article -= 3; which_article = Math.Max(which_article, 0);}
+            if (next){ which_article += 3; which_article = Math.Min(which_article, articles.Count - 3);}
+            List <Search.Article> articlesToDisplay = new List<Search.Article>();
+            for(int i=0;i<3; i++)
+            articlesToDisplay.Add(articles[which_article+i]);
 
-            List<Search.Article> articlesToDisplay = new List<Search.Article>();
-            articlesToDisplay.Add(articles[which_article]);
-            articlesToDisplay.Add(articles[which_article+1]);
-            articlesToDisplay.Add(articles[which_article+2]);
 
             return articlesToDisplay;
         }
+
 
         private void button_next_Click(object sender, EventArgs e)
         {
@@ -73,7 +67,22 @@ namespace Headline
 
         private void button_previous_Click(object sender, EventArgs e)
         {
-            DisplayResults(GetArticlesToDisplay(true, false));
+          DisplayResults(GetArticlesToDisplay(true, false));
+        }
+
+        private void RemoveUserController()
+        {
+            foreach (System.Windows.Forms.Control c in Home_Panel.Controls)
+            {
+                if (c.GetType() == typeof(UcArticle))
+                    Home_Panel.Controls.Remove(c);
+            }
+            foreach (System.Windows.Forms.Control c in Home_Panel.Controls)
+            {
+                if (c.GetType() == typeof(UcArticle))
+                    Home_Panel.Controls.Remove(c);
+            }
+
         }
     }
 }

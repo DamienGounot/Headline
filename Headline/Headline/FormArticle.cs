@@ -8,22 +8,6 @@ namespace Headline
     {
         
 
-        public FormArticle(int index)
-        {
-            InitializeComponent();
-            List<Search.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-
-            article_title.Text = articles[index].title;
-            article_date.Text = articles[index].date;
-            pictureBox6.ImageLocation = articles[index].image;
-            linkLabel4.Text = articles[index].url;
-            article_description.Text = articles[index].description;
-            article_author.Text = articles[index].author;
-            article_source.Text = articles[index].source;
-            article_content.Text = articles[index].content;
-
-        }
-
         public FormArticle(Search.Article article)
         {
             InitializeComponent();

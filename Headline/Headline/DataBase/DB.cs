@@ -103,8 +103,6 @@ namespace Headline.DataBase
             }
         }
 
-
-
         public void InsertNewUser(string username, string email, string password)
         {
             string space = " ";
@@ -138,7 +136,6 @@ namespace Headline.DataBase
             }
         }
 
-
         public string GetFavoriteCountry(string username)
         {
             string country;
@@ -160,7 +157,5 @@ namespace Headline.DataBase
             retrievePref.Close();
             return keyword;
         }
-
     }
-
 }

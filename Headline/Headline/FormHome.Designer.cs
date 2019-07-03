@@ -42,9 +42,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(427, 95);
+            this.label1.Location = new System.Drawing.Point(320, 77);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
             // Home_Panel
@@ -54,19 +55,17 @@
             this.Home_Panel.Controls.Add(this.button_previous);
             this.Home_Panel.Controls.Add(this.button_next);
             this.Home_Panel.Controls.Add(this.pictureBox2);
-            this.Home_Panel.Location = new System.Drawing.Point(0, -25);
-            this.Home_Panel.Margin = new System.Windows.Forms.Padding(4);
+            this.Home_Panel.Location = new System.Drawing.Point(0, -20);
             this.Home_Panel.Name = "Home_Panel";
-            this.Home_Panel.Size = new System.Drawing.Size(1685, 838);
+            this.Home_Panel.Size = new System.Drawing.Size(1264, 681);
             this.Home_Panel.TabIndex = 35;
             // 
             // button_previous
             // 
             this.button_previous.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_previous.Location = new System.Drawing.Point(619, 583);
-            this.button_previous.Margin = new System.Windows.Forms.Padding(4);
+            this.button_previous.Location = new System.Drawing.Point(434, 475);
             this.button_previous.Name = "button_previous";
-            this.button_previous.Size = new System.Drawing.Size(100, 28);
+            this.button_previous.Size = new System.Drawing.Size(75, 23);
             this.button_previous.TabIndex = 27;
             this.button_previous.Text = "Previous";
             this.button_previous.UseVisualStyleBackColor = true;
@@ -75,10 +74,9 @@
             // button_next
             // 
             this.button_next.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_next.Location = new System.Drawing.Point(776, 583);
-            this.button_next.Margin = new System.Windows.Forms.Padding(4);
+            this.button_next.Location = new System.Drawing.Point(552, 475);
             this.button_next.Name = "button_next";
-            this.button_next.Size = new System.Drawing.Size(100, 28);
+            this.button_next.Size = new System.Drawing.Size(75, 23);
             this.button_next.TabIndex = 26;
             this.button_next.Text = "Next";
             this.button_next.UseVisualStyleBackColor = true;
@@ -89,23 +87,22 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(635, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(410, 60);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(316, 76);
+            this.pictureBox2.Size = new System.Drawing.Size(237, 62);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
             // FormHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1685, 788);
+            this.ClientSize = new System.Drawing.Size(963, 635);
             this.ControlBox = false;
             this.Controls.Add(this.Home_Panel);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormHome";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

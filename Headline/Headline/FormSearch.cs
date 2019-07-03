@@ -31,7 +31,7 @@ namespace Headline
             if (FormSearch.keyword != "" || FormSearch.country != "" || FormSearch.source != "")
             {
                 UI.NavigationBar.Instance.Connexion();
-                FormHome mainform = new FormHome(1, keyword, country, source);
+                FormHome mainform = new FormHome(keyword, country, source);
                 mainform.MdiParent = this.MdiParent;
                 mainform.Show();
                 mainform.WindowState = FormWindowState.Maximized;
