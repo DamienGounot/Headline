@@ -36,6 +36,7 @@ namespace Headline
         public static ToolStripMenuItem search;
         public static ToolStripMenuItem preferences;
         public static ToolStripMenuItem home;
+        public static ToolStripMenuItem back;
 
 
 
@@ -77,6 +78,7 @@ namespace Headline
             search = searchToolStripMenuItem;
             preferences = preferencesToolStripMenuItem;
             home = homeToolStripMenuItem;
+            back = goBackToolStripMenuItem;
         }
 
         private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +118,19 @@ namespace Headline
             home.MdiParent = this;
             home.Show();
             home.WindowState = FormWindowState.Maximized;
+        }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Visible == true && form.GetType() != typeof(FormHome))
+                {
+                    form.Hide();
+                    break;
+                }
+            }
+            
         }
     }
 }

@@ -8,154 +8,72 @@ namespace Headline
     {
         public int which_article = 0;
         public int index;
+        string keyword;
+        string country;
+        string sources;
 
-        public FormHome(int count,string keyword, string country, string sources)
+        private List<Search.Article> articles;
+
+        public FormHome(int count, string keyword, string country, string sources)
         {
             InitializeComponent();
+            this.keyword = keyword;
+            this.country = country;
+            this.sources = sources;
+            GetListOfArticles();
+            DisplayResults(GetArticlesToDisplay(false, false));
+        }
 
+        private void GetListOfArticles()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            API.AllAPI.Instance.search(keyword, country, sources);
+            articles = API.AllAPI.Instance.GetLastResearchedArticles();
+            Cursor.Current = Cursors.Default;
+        }
 
-            if (count > 0)
+        private void DisplayResults(List<Search.Article> articles)
+        {
+            foreach (Control c in Home_Panel.Controls)
             {
-                if (count!=5)
-                {
-                    Cursor.Current = Cursors.WaitCursor;                  
-                    API.AllAPI.Instance.search(keyword, country, sources);
-                    Cursor.Current = Cursors.Default;
-                }
-
-                Cursor.Current = Cursors.WaitCursor;
-                List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-                Cursor.Current = Cursors.Default;
-
-                if (articles.Count >= 1)
-                {
-                    titlehome1.Text = articles[which_article+0].title;
-                    pictureBoxArticle1.ImageLocation = articles[which_article+0].image;
-                }
-
-                if (articles.Count >= 2)
-                {
-                    titlehome2.Text = articles[which_article+1].title;
-                    pictureBoxArticle2.ImageLocation = articles[which_article+1].image;
-                }
-
-                if (articles.Count >= 3)
-                {
-                    titlehome3.Text = articles[which_article+2].title;
-                    pictureBoxArticle3.ImageLocation = articles[which_article+2].image;
-                }
-
-
+                if (c.GetType() == typeof(UcArticle))
+                    Home_Panel.Controls.Remove(c);
             }
+
+            for (int i = 0; i < 3; i++)
+            {
+                UcArticle uc = new UcArticle();
+                uc.MdiForm = this.MdiParent;
+                uc.Artickle = articles[i];
+
+                uc.Location = new System.Drawing.Point((i * uc.Width + 10) + 50, 100);
+
+                Home_Panel.Controls.Add(uc);
+            }
+            
         }
 
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private List<Search.Article> GetArticlesToDisplay(bool previous = false, bool next = false)
         {
-            UI.NavigationBar.Instance.Article();
-            FormArticle articlepage = new FormArticle(which_article);
-            articlepage.MdiParent = this.MdiParent;
-            articlepage.Show();
-            articlepage.WindowState = FormWindowState.Maximized;
-            this.Hide();
-        }
+            if (previous) which_article -= 3; Math.Max(which_article, 0);
+            if (next) which_article += 3; Math.Min(which_article, articles.Count - 3);
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            UI.NavigationBar.Instance.Article();
-            FormArticle articlepage = new FormArticle(which_article+1);
-            articlepage.MdiParent = this.MdiParent;
-            articlepage.Show();
-            articlepage.WindowState = FormWindowState.Maximized;
-            this.Hide();
-        }
+            List<Search.Article> articlesToDisplay = new List<Search.Article>();
+            articlesToDisplay.Add(articles[which_article]);
+            articlesToDisplay.Add(articles[which_article+1]);
+            articlesToDisplay.Add(articles[which_article+2]);
 
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            UI.NavigationBar.Instance.Article();
-            FormArticle articlepage = new FormArticle(which_article+2);
-            articlepage.MdiParent = this.MdiParent;
-            articlepage.Show();
-            articlepage.WindowState = FormWindowState.Maximized;
-            this.Hide();
+            return articlesToDisplay;
         }
 
         private void button_next_Click(object sender, EventArgs e)
         {
-
-            List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-            int nbarticles;
-            if (articles.Count > 0)
-            {
-                nbarticles = articles[0].nbarticles;
-            }
-            else
-            {
-                nbarticles = 0;
-            }
-               
-                
-
-            if (nbarticles <= 20)
-            {
-                if (which_article < nbarticles-4)
-                {
-                    which_article = which_article + 3;
-                }
-
-            }
-            else
-            {
-                if(which_article<15)
-                    which_article = which_article + 3;
-            }
-
-
-            if (articles.Count >= 1)
-            {
-                titlehome1.Text = articles[which_article + 0].title;
-                pictureBoxArticle1.ImageLocation = articles[which_article + 0].image;
-            }
-
-            if (articles.Count >= 2)
-            {
-                titlehome2.Text = articles[which_article + 1].title;
-                pictureBoxArticle2.ImageLocation = articles[which_article + 1].image;
-            }
-
-            if (articles.Count >= 3)
-            {
-                titlehome3.Text = articles[which_article + 2].title;
-                pictureBoxArticle3.ImageLocation = articles[which_article + 2].image;
-            }
+            DisplayResults(GetArticlesToDisplay(false, true));
         }
 
         private void button_previous_Click(object sender, EventArgs e)
         {
-            if (which_article >= 3)
-            {
-                which_article = which_article - 3;
-            }
-
-            List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
-
-            if (articles.Count >= 1)
-            {
-                titlehome1.Text = articles[which_article + 0].title;
-                pictureBoxArticle1.ImageLocation = articles[which_article + 0].image;
-            }
-
-            if (articles.Count >= 2)
-            {
-                titlehome2.Text = articles[which_article + 1].title;
-                pictureBoxArticle2.ImageLocation = articles[which_article + 1].image;
-            }
-
-            if (articles.Count >= 3)
-            {
-                titlehome3.Text = articles[which_article + 2].title;
-                pictureBoxArticle3.ImageLocation = articles[which_article + 2].image;
-            }
+            DisplayResults(GetArticlesToDisplay(true, false));
         }
     }
 }
