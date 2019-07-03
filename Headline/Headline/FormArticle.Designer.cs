@@ -89,6 +89,7 @@
             // article_content
             // 
             this.article_content.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.article_content.Enabled = false;
             this.article_content.Location = new System.Drawing.Point(45, 451);
             this.article_content.Name = "article_content";
             this.article_content.Size = new System.Drawing.Size(1171, 166);

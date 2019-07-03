@@ -176,3 +176,4 @@ C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.cspr
 C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.exe
 C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.pdb
 C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.ucArticle.resources
+C:\Users\Damien\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.UcArticle.resources

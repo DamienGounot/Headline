@@ -23,39 +23,22 @@ namespace Headline
                 if (_instance == null)
                     _instance = new FormLogin();
                 return _instance;
-
             }
         }
 
         public void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
-
         }
-
-        public void ShowForm(Form frm)
-        {
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
-            this.Hide();
-        }
-
-
-
-
 
         private void button_login_Click(object sender, EventArgs e)
         {
-
             if (textBox_username.Text == "" || textBox_password.Text == "")
             {
                 Check(label_error, "Error : username and password are required");
             }
             else
             {
-
-
-
                 if (DataBase.DB.Instance.CheckLogin(textBox_username.Text, textBox_password.Text)) // si le login est OK
                 {
                     username = textBox_username.Text;
@@ -69,29 +52,20 @@ namespace Headline
                     Check(label_error, "Error : Incorrect Username or Password");
                     reset();
                 }
-
-
             }
         }
-
 
         private void LoginResearch(string favoriteCountry,string favoriteKeyword)
         {
             if ((favoriteCountry == " " || favoriteKeyword == " " ) || (favoriteCountry == "" && favoriteKeyword == ""))
             {
-                FormHome mainform = new FormHome(1, "", "us", "");
-                mainform.MdiParent = this.MdiParent;
-                mainform.Show();
-                mainform.WindowState = FormWindowState.Maximized;
-                this.Hide();
+                FormHome mainform = new FormHome("", "us", "");
+                InitializeForm(mainform);
             }
             else
             {
-                FormHome mainform = new FormHome(1, favoriteKeyword, favoriteCountry, "");
-                mainform.MdiParent = this.MdiParent;
-                mainform.Show();
-                mainform.WindowState = FormWindowState.Maximized;
-                this.Hide();
+                FormHome mainform = new FormHome(favoriteKeyword, favoriteCountry, "");
+                InitializeForm(mainform);
             }
         }
 
@@ -101,7 +75,6 @@ namespace Headline
             textBox_password.Text = "";
         }
 
-
         private void Check(System.Windows.Forms.Label label,string message)
         {
             label.Text = message;
@@ -109,6 +82,12 @@ namespace Headline
             label.Visible = true;
         }
 
- 
+        private void InitializeForm(System.Windows.Forms.Form mainform)
+        {
+            mainform.MdiParent = FormContainer.Instance;
+            mainform.Show();
+            mainform.WindowState = FormWindowState.Maximized;
+            this.Hide();
+        }
     }
 }

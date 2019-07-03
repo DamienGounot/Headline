@@ -1,4 +1,6 @@
-﻿namespace Headline.Search
+﻿using System.Windows.Forms;
+
+namespace Headline.Search
 {
     public class Article
     {
@@ -11,6 +13,5 @@
         public string url;
         public string author;
         public int nbarticles;
-
     }
 }

@@ -8,26 +8,15 @@ namespace Headline
         public FormContainer()
         {
             InitializeComponent();
+            Instance = this;
         }
 
 
-        public static FormContainer _instance;
-
-        public static FormContainer Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new FormContainer();
-                return _instance;
-
-            }
-        }
+        public static FormContainer Instance;
 
         public void Container_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _instance = null;
-
+            Instance = null;
         }
 
         public static ToolStripMenuItem login;
@@ -37,9 +26,6 @@ namespace Headline
         public static ToolStripMenuItem preferences;
         public static ToolStripMenuItem home;
         public static ToolStripMenuItem back;
-
-
-
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,7 +37,6 @@ namespace Headline
             Login.MdiParent = this;
             Login.Show();
             InitNavbar();
-            Login.WindowState = FormWindowState.Maximized;
         }
 
         private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,9 +50,6 @@ namespace Headline
             registration.MdiParent = this;
             registration.Show();
             InitNavbar();
-            registration.WindowState = FormWindowState.Maximized;
-            
-
         }
 
         private void InitNavbar()
@@ -83,16 +65,11 @@ namespace Headline
 
         private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Visible = false;
-            UI.NavigationBar.Instance.Deconnexion();
-           // FormLogin login = new FormLogin();
-           // login.MdiParent = this;
-           // login.Show();
+            GoToStart();
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Visible = false;
             UI.NavigationBar.Instance.Search();
             FormSearch search = new FormSearch();
             search.MdiParent = this;
@@ -102,7 +79,6 @@ namespace Headline
 
         private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Visible = false;
             UI.NavigationBar.Instance.Preferences();
             FormPreferences preferences = new FormPreferences();
             preferences.MdiParent = this;
@@ -112,15 +88,15 @@ namespace Headline
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Visible = false;
-            UI.NavigationBar.Instance.Connexion();
-            FormHome home = new FormHome(5, "keyword", "country", "sources");
-            home.MdiParent = this;
-            home.Show();
-            home.WindowState = FormWindowState.Maximized;
+            GoToHome();
         }
 
         private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GoToHome();
+        }
+
+        private void GoToHome()
         {
             foreach (Form form in this.MdiChildren)
             {
@@ -130,7 +106,20 @@ namespace Headline
                     break;
                 }
             }
-            
+            UI.NavigationBar.Instance.Connexion();
+        }
+
+        private void GoToStart()
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form.Visible == true && form.GetType() != typeof(FormContainer))
+                {
+                    form.Hide();
+                    break;
+                }
+            }
+            UI.NavigationBar.Instance.Deconnexion();
         }
     }
 }
