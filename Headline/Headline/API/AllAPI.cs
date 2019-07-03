@@ -6,9 +6,9 @@ namespace Headline.API
     {
         public static AllAPI Instance;
 
-        List<Research.Article> lastResearchedarticles = new List<Research.Article>();
-        Research.GetResearch research = new Research.GetResearch();
-        Research.CreateUrl url = new Research.CreateUrl();
+        List<Search.Article> lastResearchedarticles = new List<Search.Article>();
+        Search.GetResearch research = new Search.GetResearch();
+        Search.CreateUrl url = new Search.CreateUrl();
         CallAPI api = new CallAPI();
         
         public AllAPI()
@@ -28,7 +28,7 @@ namespace Headline.API
             lastResearchedarticles = api.showTITLE(json);
         }
 
-        public List<Research.Article> GetLastResearchedArticles()
+        public List<Search.Article> GetLastResearchedArticles()
         {
             return lastResearchedarticles;
         }

@@ -11,7 +11,7 @@ namespace Headline
         public FormArticle(int index)
         {
             InitializeComponent();
-            List<Research.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
+            List<Search.Article> articles = API.AllAPI.Instance.GetLastResearchedArticles();
 
             article_title.Text = articles[index].title;
             article_date.Text = articles[index].date;
@@ -21,6 +21,21 @@ namespace Headline
             article_author.Text = articles[index].author;
             article_source.Text = articles[index].source;
             article_content.Text = articles[index].content;
+
+        }
+
+        public FormArticle(Search.Article article)
+        {
+            InitializeComponent();
+           
+            article_title.Text = article.title;
+            article_date.Text = article.date;
+            pictureBox6.ImageLocation = article.image;
+            linkLabel4.Text = article.url;
+            article_description.Text = article.description;
+            article_author.Text = article.author;
+            article_source.Text = article.source;
+            article_content.Text = article.content;
 
         }
 

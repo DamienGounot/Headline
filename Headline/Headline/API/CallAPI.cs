@@ -15,17 +15,17 @@ namespace Headline.API
 
         }
 
-        public List<Research.Article> showTITLE(string json)
+        public List<Search.Article> showTITLE(string json)
         {
 
             var jPerson = JsonConvert.DeserializeObject<dynamic>(json);
             int y = jPerson.totalResults;
             
-            List<Research.Article> articles = new List<Research.Article>();
+            List<Search.Article> articles = new List<Search.Article>();
 
             foreach (var num in jPerson.articles)
              {
-                Research.Article article = new Research.Article();
+                Search.Article article = new Search.Article();
                 article.title = num.title;
                 article.image = num.urlToImage;
                 article.source = num.source.name;

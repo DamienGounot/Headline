@@ -83,11 +83,11 @@
     <Compile Include="FormContainer.Designer.cs">
       <DependentUpon>FormContainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Research\Article.cs" />
+    <Compile Include="Search\Article.cs" />
     <Compile Include="API\CallAPI.cs" />
-    <Compile Include="Research\CreateUrl.cs" />
+    <Compile Include="Search\CreateUrl.cs" />
     <Compile Include="DataBase\DB.cs" />
-    <Compile Include="Research\GetResearch.cs" />
+    <Compile Include="Search\GetResearch.cs" />
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +126,12 @@
     <Compile Include="FormArticle.Designer.cs">
       <DependentUpon>FormArticle.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcArticle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcArticle.Designer.cs">
+      <DependentUpon>UcArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\NavigationBar.cs" />
     <EmbeddedResource Include="FormContainer.resx">
       <DependentUpon>FormContainer.cs</DependentUpon>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormArticle.resx">
       <DependentUpon>FormArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcArticle.resx">
+      <DependentUpon>UcArticle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

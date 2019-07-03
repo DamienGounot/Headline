@@ -27,6 +27,8 @@
             FormContainer.search.Visible = true;
             FormContainer.preferences.Visible = true;
             FormContainer.home.Visible = false;
+            FormContainer.back.Visible = false;
+
         }
 
         public void Deconnexion()
@@ -37,6 +39,8 @@
             FormContainer.search.Visible = false;
             FormContainer.preferences.Visible = false;
             FormContainer.home.Visible = false;
+            FormContainer.back.Visible = false;
+
         }
 
         public void Search()
@@ -47,6 +51,8 @@
             FormContainer.search.Visible = false;
             FormContainer.preferences.Visible = true;
             FormContainer.home.Visible = true;
+            FormContainer.back.Visible = false;
+
         }
 
         public void Preferences()
@@ -57,6 +63,7 @@
             FormContainer.search.Visible = true;
             FormContainer.preferences.Visible = false;
             FormContainer.home.Visible = true;
+            FormContainer.back.Visible = false;
         }
 
         public void Article()
@@ -67,6 +74,7 @@
             FormContainer.search.Visible = true;
             FormContainer.preferences.Visible = true;
             FormContainer.home.Visible = true;
+            FormContainer.back.Visible = true;
         }
 
 

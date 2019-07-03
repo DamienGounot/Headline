@@ -151,3 +151,28 @@ C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormPreferenc
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormRegistration.resources
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormSearch.resources
 C:\Users\vince\Desktop\r190E6\Headline\Headline\obj\Debug\Headline.FormArticle.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\Headline.exe.config
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\Headline.exe
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\Headline.pdb
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\NewsAPI.dll
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\Newtonsoft.Json.dll
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\Google.Protobuf.dll
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\BouncyCastle.Crypto.dll
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\MySql.Data.xml
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\NewsAPI.xml
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\bin\Debug\Newtonsoft.Json.xml
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.csprojAssemblyReference.cache
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormContainer.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormHome.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormLogin.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormPreferences.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.Properties.Resources.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormRegistration.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormSearch.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.FormArticle.resources
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.csproj.GenerateResource.cache
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.csproj.CoreCompileInputs.cache
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.csproj.CopyComplete
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.exe
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.pdb
+C:\Nastava\PI 2019\190E6 Headlines\git\Headline\Headline\obj\Debug\Headline.ucArticle.resources
