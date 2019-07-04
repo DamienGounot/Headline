@@ -6,8 +6,7 @@ namespace Headline
 {
     public partial class FormHome : Form
     {
-        public int which_article = 0;
-        public int index;
+        public int Index = 0;
         string keyword;
         string country;
         string sources;
@@ -37,28 +36,27 @@ namespace Headline
         {
             RemoveUserController();
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < GetNumberOfArticles(); i++)
             {
                 UcArticle uc = new UcArticle();
                 uc.FormContainer = FormContainer.Instance;
                 uc.Artickle = articles[i];
-                uc.Location = new System.Drawing.Point((i * uc.Width + 200) + 10, 200);
+                uc.Location = new System.Drawing.Point((i * uc.Width) + 10, 200);
                 Home_Panel.Controls.Add(uc);
-            }           
+            }
         }
 
         private List<Search.Article> GetArticlesToDisplay(bool previous = false, bool next = false)
         {
-            if (previous){which_article -= 3; which_article = Math.Max(which_article, 0);}
-            if (next){ which_article += 3; which_article = Math.Min(which_article, articles.Count - 3);}
-            List <Search.Article> articlesToDisplay = new List<Search.Article>();
-            for(int i=0;i<3; i++)
-            articlesToDisplay.Add(articles[which_article+i]);
+            if (previous) { Index -= GetNumberOfArticles(); Index = Math.Max(Index, 0); }
+            if (next) { Index += GetNumberOfArticles(); Index = Math.Min(Index, articles.Count - GetNumberOfArticles()); }
+            List<Search.Article> articlesToDisplay = new List<Search.Article>();
+            for (int i = 0; i < GetNumberOfArticles(); i++)
+                articlesToDisplay.Add(articles[Index + i]);
 
 
             return articlesToDisplay;
         }
-
 
         private void button_next_Click(object sender, EventArgs e)
         {
@@ -72,16 +70,19 @@ namespace Headline
 
         private void RemoveUserController()
         {
-            foreach (System.Windows.Forms.Control c in Home_Panel.Controls)
+            for (int i = 0; i < 2; i++)
             {
-                if (c.GetType() == typeof(UcArticle))
-                    Home_Panel.Controls.Remove(c);
-            }
-            foreach (System.Windows.Forms.Control c in Home_Panel.Controls)
-            {
-                if (c.GetType() == typeof(UcArticle))
-                    Home_Panel.Controls.Remove(c);
-            }
+                foreach (System.Windows.Forms.Control c in Home_Panel.Controls)
+                {
+                    if (c.GetType() == typeof(UcArticle))
+                        Home_Panel.Controls.Remove(c);
+                }
+            }    
+        }
+
+        private int GetNumberOfArticles()
+        {
+            return this.Home_Panel.Size.Width / 230;
 
         }
     }

@@ -28,6 +28,8 @@
             FormContainer.preferences.Visible = true;
             FormContainer.home.Visible = false;
             FormContainer.back.Visible = false;
+            FormContainer.previous.Visible = false;
+            FormContainer.next.Visible = false;
 
         }
 
@@ -40,7 +42,8 @@
             FormContainer.preferences.Visible = false;
             FormContainer.home.Visible = false;
             FormContainer.back.Visible = false;
-
+            FormContainer.previous.Visible = false;
+            FormContainer.next.Visible = false;
         }
 
         public void Search()
@@ -49,10 +52,11 @@
             FormContainer.register.Visible = false;
             FormContainer.deconnexion.Visible = true;
             FormContainer.search.Visible = false;
-            FormContainer.preferences.Visible = true;
+            FormContainer.preferences.Visible = false;
             FormContainer.home.Visible = true;
-            FormContainer.back.Visible = true;
-
+            FormContainer.back.Visible = false;
+            FormContainer.previous.Visible = false;
+            FormContainer.next.Visible = false;
         }
 
         public void Preferences()
@@ -60,10 +64,12 @@
             FormContainer.login.Visible = false;
             FormContainer.register.Visible = false;
             FormContainer.deconnexion.Visible = true;
-            FormContainer.search.Visible = true;
+            FormContainer.search.Visible = false;
             FormContainer.preferences.Visible = false;
             FormContainer.home.Visible = true;
-            FormContainer.back.Visible = true;
+            FormContainer.back.Visible = false;
+            FormContainer.previous.Visible = false;
+            FormContainer.next.Visible = false;
         }
 
         public void Article()
@@ -71,12 +77,12 @@
             FormContainer.login.Visible = false;
             FormContainer.register.Visible = false;
             FormContainer.deconnexion.Visible = true;
-            FormContainer.search.Visible = true;
-            FormContainer.preferences.Visible = true;
-            FormContainer.home.Visible = true;
+            FormContainer.search.Visible = false;
+            FormContainer.preferences.Visible = false;
+            FormContainer.home.Visible = false;
             FormContainer.back.Visible = true;
+            FormContainer.previous.Visible = false;
+            FormContainer.next.Visible = false;
         }
-
-
     }
 }
