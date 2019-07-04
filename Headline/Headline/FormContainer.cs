@@ -26,6 +26,8 @@ namespace Headline
         public static ToolStripMenuItem preferences;
         public static ToolStripMenuItem home;
         public static ToolStripMenuItem back;
+        public static ToolStripMenuItem next;
+        public static ToolStripMenuItem previous;
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -61,11 +63,13 @@ namespace Headline
             preferences = preferencesToolStripMenuItem;
             home = homeToolStripMenuItem;
             back = goBackToolStripMenuItem;
+            next = nextToolStripMenuItem;
+            previous = previousToolStripMenuItem;
         }
 
         private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GoToStart();
+            GoTo(FormContainer.Instance);
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,14 +113,13 @@ namespace Headline
             UI.NavigationBar.Instance.Connexion();
         }
 
-        private void GoToStart()
+        private void GoTo(System.Windows.Forms.Form Form)
         {
             foreach (Form form in this.MdiChildren)
             {
-                if (form.Visible == true && form.GetType() != typeof(FormContainer))
+                if (form.GetType() != typeof(Form))
                 {
                     form.Hide();
-                    break;
                 }
             }
             UI.NavigationBar.Instance.Deconnexion();

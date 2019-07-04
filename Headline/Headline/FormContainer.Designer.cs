@@ -37,6 +37,8 @@
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,9 @@
             this.searchToolStripMenuItem,
             this.preferencesToolStripMenuItem,
             this.homeToolStripMenuItem,
-            this.goBackToolStripMenuItem});
+            this.goBackToolStripMenuItem,
+            this.previousToolStripMenuItem,
+            this.nextToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(963, 28);
@@ -118,6 +122,22 @@
             this.goBackToolStripMenuItem.Visible = false;
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
+            // previousToolStripMenuItem
+            // 
+            this.previousToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("previousToolStripMenuItem.Image")));
+            this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
+            this.previousToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.previousToolStripMenuItem.Text = "Previous";
+            this.previousToolStripMenuItem.Visible = false;
+            // 
+            // nextToolStripMenuItem
+            // 
+            this.nextToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nextToolStripMenuItem.Image")));
+            this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
+            this.nextToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.nextToolStripMenuItem.Text = "Next";
+            this.nextToolStripMenuItem.Visible = false;
+            // 
             // FormContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +171,7 @@
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nextToolStripMenuItem;
     }
 }
